@@ -149,12 +149,19 @@
             { "leg": "PAUSE (During Mass)", "time": "1:00 PM - 2:30 PM", "details": "Service suspended" },
             { "leg": "RETURN (Yetti -> El Ganzo)", "time": "2:30 PM - 7:30 PM", "details": "Departures every 15 min" }
         ],
-        "locations": {
+        "location_names": {
             "el_ganzo": "Hotel El Ganzo",
             "yetti": "Yetti",
-            "sculpture_garden": "Jardín de las Esculturas",
+            "sculpture_garden": "Sculpture Garden",
             "crania": "Crania",
-            "la_marina_inn": "Hotel La Marina Inn"
+            "la_marina_inn": "La Marina Inn Hotel"
+        },
+        "location_addresses": {
+            "el_ganzo": "Blvd. Tiburón s/n, La Playita, San José del Cabo",
+            "yetti": "In the marina, access via boat from El Ganzo",
+            "sculpture_garden": "Next to El Ganzo, La Playita",
+            "crania": "Hotel Zone, San José del Cabo",
+            "la_marina_inn": "A few steps from El Ganzo, La Playita"
         },
         "faqs": {
             "q1": "What do 'Beach Casual' and 'Formal' mean?",

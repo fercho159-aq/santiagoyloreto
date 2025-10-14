@@ -149,12 +149,19 @@
             { "leg": "PAUSA (Durante la Misa)", "time": "1:00 PM - 2:30 PM", "details": "Servicio suspendido" },
             { "leg": "REGRESO (Yetti -> El Ganzo)", "time": "2:30 PM - 7:30 PM", "details": "Salidas cada 15 min" }
         ],
-        "locations": {
+        "location_names": {
             "el_ganzo": "Hotel El Ganzo",
             "yetti": "Yetti",
             "sculpture_garden": "Jardín de las Esculturas",
             "crania": "Crania",
             "la_marina_inn": "Hotel La Marina Inn"
+        },
+        "location_addresses": {
+            "el_ganzo": "Blvd. Tiburón s/n, La Playita, San José del Cabo",
+            "yetti": "En la marina, acceso vía barco desde El Ganzo",
+            "sculpture_garden": "Junto a El Ganzo, La Playita",
+            "crania": "Zona Hotelera, San José del Cabo",
+            "la_marina_inn": "A unos pasos de El Ganzo, La Playita"
         },
         "faqs": {
             "q1": "¿Qué significa 'Beach Casual' y 'Formal'?",
@@ -169,7 +176,7 @@
             "q3": "¿Además de los eventos, qué más recomiendan hacer?",
             "a3": "¡Están en un paraíso! Recomendamos explorar el centro histórico de San José del Cabo, especialmente el 'Art Walk' del jueves por la noche. También pueden disfrutar de las playas (Playa Palmilla es hermosa), tomar una clase de surf, o hacer un tour en barco al Arco de Cabo San Lucas.",
             "q4": "¿Necesito confirmar mi asistencia a cada evento por separado?",
-            "a4": "No es necesario. Con que completes el formulario de RSVP en esta web, entenderemos que asistirás a todos los eventos programados para el fin de semana. Si por alguna razón no puedes asistir a un evento en particular, por favor avísanos personalmente."
+            "a4": "No es necesario. Con que completes el formulario de RSVP en esta web, entenderemos que asistirás a todos los eventos programados para el fin de semana. Si por alguna razón no puedes asistir a un evento en particular, por favor avísanos personally."
         },
         "days": {
             "thursday": "Jueves",
