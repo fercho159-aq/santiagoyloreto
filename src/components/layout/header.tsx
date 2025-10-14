@@ -26,17 +26,6 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
-  const getLinkPath = (href: string) => {
-    if (href.startsWith('/#')) {
-        // Check if we are on the homepage
-        if (typeof window !== 'undefined' && window.location.pathname === '/') {
-            return href.substring(1); // Return anchor only
-        }
-        return href; // Return full path with anchor
-    }
-    return href; // For external/other pages
-  }
 
   return (
     <header
@@ -57,7 +46,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={getLinkPath(link.href)}
+              href={link.href}
               className="font-semibold text-primary/80 transition-colors hover:text-primary"
             >
               {link.name}
