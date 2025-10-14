@@ -192,7 +192,8 @@
                 "bookingCode": "2511LORETO",
                 "phone": "+52 624 104 9000",
                 "email": "reservas@elganzo.com",
-                "bookingLink": "#"
+                "bookingLink": "#",
+                "imageDescription": "Vista exterior del elegante Hotel El Ganzo"
             },
             {
                 "imageId": "hotel-la-marina",
@@ -200,7 +201,8 @@
                 "bookingCode": "Boda Loreto & Santiago",
                 "phone": "+1 310 272 9244 / +52 524 142 4166",
                 "email": "manager@lamarinainn.com",
-                "bookingLink": null
+                "bookingLink": null,
+                "imageDescription": "Encantadora vista del Hotel La Marina Inn"
             },
             {
                 "imageId": "jw-marriott",
@@ -209,7 +211,8 @@
                 "contactPerson": "Carlos Davis",
                 "phone": "+52 624 163 7625",
                 "email": "jwlc.greservaciones@grupodiestra.com",
-                "bookingLink": "#"
+                "bookingLink": "#",
+                "imageDescription": "Zona de lujo del hotel JW Marriott"
             },
             {
                 "imageId": "ritz-carlton",
@@ -217,7 +220,8 @@
                 "bookingCode": "BSL",
                 "phone": "+52 624 172 9000 / +52 624 121 2880",
                 "email": "reservas.zadun@ritzcarlton.com",
-                "bookingLink": "#"
+                "bookingLink": "#",
+                "imageDescription": "Vista clásica del hotel Ritz Carlton"
             },
             {
                 "imageId": "secrets-resort",
@@ -225,7 +229,8 @@
                 "bookingCode": "Santiago & Loreto",
                 "phone": null,
                 "email": "martha.arangure@secretsresorts.com",
-                "bookingLink": null
+                "bookingLink": null,
+                "imageDescription": "Vista del resort Secrets"
             }
         ],
         "cdmx_sections": {

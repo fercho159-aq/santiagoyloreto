@@ -16,37 +16,37 @@ const images: ImagePlaceholder[] = [
     {
       "id": "dress-code-welcome-1",
       "description": "Woman in a stylish beach outfit",
-      "imageUrl": "https://picsum.photos/seed/welcomeoutfit1/400/600",
+      "imageUrl": "/images/dress-code-welcome/5 (1).jpg",
       "imageHint": "beach fashion"
     },
     {
       "id": "dress-code-welcome-2",
       "description": "Man in a casual but elegant beach attire",
-      "imageUrl": "https://picsum.photos/seed/welcomeoutfit2/400/600",
+      "imageUrl": "/images/dress-code-welcome/4 (2).png",
       "imageHint": "mens beachwear"
     },
     {
       "id": "dress-code-welcome-3",
       "description": "Another stylish outfit for a welcome cocktail on the beach",
-      "imageUrl": "https://picsum.photos/seed/welcomeoutfit3/400/600",
+      "imageUrl": "/images/dress-code-welcome/6 (1).jpg",
       "imageHint": "cocktail dress"
     },
     {
       "id": "dress-code-wedding-1",
       "description": "Elegant formal dress for an outdoor garden wedding",
-      "imageUrl": "https://picsum.photos/seed/weddingoutfit1/400/600",
+      "imageUrl": "/images/dress-code-wedding/1 (1).jpg",
       "imageHint": "garden wedding"
     },
     {
       "id": "dress-code-wedding-2",
       "description": "Man in a sharp suit suitable for a formal reception",
-      "imageUrl": "https://picsum.photos/seed/weddingoutfit2/400/600",
+      "imageUrl": "/images/dress-code-wedding/(1).png",
       "imageHint": "formal suit"
     },
     {
       "id": "dress-code-wedding-3",
       "description": "A beautiful long dress, perfect for a wedding reception",
-      "imageUrl": "https://picsum.photos/seed/weddingoutfit3/400/600",
+      "imageUrl": "/images/dress-code-wedding/2.jpg",
       "imageHint": "elegant gown"
     }
 ];

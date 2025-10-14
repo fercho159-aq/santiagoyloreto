@@ -15,7 +15,7 @@ type AccommodationSectionProps = {
 const accommodationImage = {
   id: "jw-marriott",
   description: "Luxury area of JW Marriott hotel",
-  imageUrl: "https://picsum.photos/seed/jwmarriott/600/400",
+  imageUrl: "/images/Hotel/rooftop.jpg",
   imageHint: "luxury hotel resort"
 };
 

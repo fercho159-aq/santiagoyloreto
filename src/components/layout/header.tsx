@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { WeddingRingIcon } from "../icons";
 import { usePathname } from 'next/navigation';
 import LocaleSwitcher from "./lang-switcher";
+import Image from "next/image";
 
 type HeaderProps = {
   dictionary: {
@@ -61,7 +61,7 @@ export default function Header({ dictionary }: HeaderProps) {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href={`/${lang}`} className="flex items-center gap-2">
-          <WeddingRingIcon className="h-6 w-6 text-primary" />
+          <Image src="https://picsum.photos/seed/rings/24/24" alt="Wedding Rings" width={24} height={24} className="text-primary" />
           <span className="font-headline text-xl font-semibold text-primary">
             L & S
           </span>
@@ -79,7 +79,7 @@ export default function Header({ dictionary }: HeaderProps) {
                  <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                  <div className="flex items-center justify-between">
                    <Link href={`/${lang}`} className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <WeddingRingIcon className="h-6 w-6 text-primary" />
+                    <Image src="https://picsum.photos/seed/rings/24/24" alt="Wedding Rings" width={24} height={24} className="text-primary" />
                     <span className="font-headline text-xl font-semibold text-primary">
                       Loreto & Santiago
                     </span>

@@ -18,103 +18,103 @@ const images: ImagePlaceholder[] = [
     {
       "id": "cdmx-soho-house",
       "description": "Soho House in Mexico City",
-      "imageUrl": "https://picsum.photos/seed/sohohouse/800/600",
+      "imageUrl": "/images/CDMX/01_CDMX_Hero_53.avif",
       "imageHint": "luxury hotel"
     },
     {
       "id": "cdmx-condesa-df",
       "description": "Condesa DF Hotel",
-      "imageUrl": "https://picsum.photos/seed/condesadf/800/600",
+      "imageUrl": "/images/CDMX/CONDESA DF .jpeg",
       "imageHint": "boutique hotel"
     },
     {
       "id": "cdmx-octavia-casa",
       "description": "Octavia Casa hotel interior",
-      "imageUrl": "https://picsum.photos/seed/octaviacasa/800/600",
+      "imageUrl": "/images/CDMX/OCTAVIA.jpeg",
       "imageHint": "minimalist hotel"
     },
     {
       "id": "cdmx-chapultepec",
       "description": "Chapultepec Castle",
-      "imageUrl": "https://picsum.photos/seed/chapultepec/800/600",
+      "imageUrl": "/images/CDMX/chapultepec.jpeg",
       "imageHint": "castle cdmx"
     },
     {
       "id": "cdmx-frida-kahlo",
       "description": "Frida Kahlo Museum (Casa Azul)",
-      "imageUrl": "https://picsum.photos/seed/fridakahlo/800/600",
+      "imageUrl": "/images/CDMX/frida.jpeg",
       "imageHint": "frida kahlo"
     },
     {
       "id": "cdmx-desfile",
       "description": "Day of the Dead parade in Mexico City",
-      "imageUrl": "https://picsum.photos/seed/diademuertos/800/600",
+      "imageUrl": "/images/CDMX/ofrenda-monumental-zocalo-cdmx.jpg",
       "imageHint": "parade skulls"
     },
     {
       "id": "cdmx-casa-gilardi",
       "description": "Casa Gilardi by Luis Barragan",
-      "imageUrl": "https://picsum.photos/seed/casagilardi/800/600",
+      "imageUrl": "/images/CDMX/barragan.jpeg",
       "imageHint": "modernist architecture"
     },
     {
       "id": "cdmx-bellas-artes",
       "description": "Palacio de Bellas Artes",
-      "imageUrl": "https://picsum.photos/seed/bellasartes/800/600",
+      "imageUrl": "/images/CDMX/bellas artes.jpeg",
       "imageHint": "art deco"
     },
     {
       "id": "cdmx-panaderia-rosetta",
       "description": "Interior of Panaderia Rosetta",
-      "imageUrl": "https://picsum.photos/seed/panaderiarosetta/800/600",
+      "imageUrl": "/images/CDMX/file.jpg",
       "imageHint": "artisan bakery"
     },
     {
       "id": "cdmx-maizajo",
       "description": "Tacos from Maizajo",
-      "imageUrl": "https://picsum.photos/seed/maizajo/800/600",
+      "imageUrl": "/images/CDMX/Maizajo_DSC_0354.webp",
       "imageHint": "gourmet tacos"
     },
     {
       "id": "cdmx-expendio-maiz",
       "description": "Expendio de Maíz restaurant",
-      "imageUrl": "https://picsum.photos/seed/expendiomaiz/800/600",
+      "imageUrl": "/images/CDMX/download.jpg",
       "imageHint": "traditional mexican food"
     },
     {
       "id": "cdmx-rosetta",
       "description": "Rosetta restaurant dining room",
-      "imageUrl": "https://picsum.photos/seed/rosetta/800/600",
+      "imageUrl": "/images/CDMX/A90A9847-683x1024.jpg",
       "imageHint": "italian restaurant"
     },
     {
       "id": "cdmx-maximo-bistrot",
       "description": "A dish from Máximo Bistrot",
-      "imageUrl": "https://picsum.photos/seed/maximobistrot/800/600",
+      "imageUrl": "/images/CDMX/41fef20483cd4bc8b07532c8a8747e5d.webp",
       "imageHint": "fine dining"
     },
     {
       "id": "cdmx-lardo",
       "description": "Lardo restaurant ambiance",
-      "imageUrl": "https://picsum.photos/seed/lardo/800/600",
+      "imageUrl": "/images/CDMX/LARDO1.jpg",
       "imageHint": "casual dining"
     },
     {
       "id": "cdmx-pujol",
       "description": "The interior of Pujol restaurant",
-      "imageUrl": "https://picsum.photos/seed/pujol/800/600",
+      "imageUrl": "/images/CDMX/JSa_Pujol_LGM_0254+(Footer).jpg",
       "imageHint": "michelin star"
     },
     {
       "id": "cdmx-onora",
       "description": "Handcrafted items at Onora Casa",
-      "imageUrl": "https://picsum.photos/seed/onoracasa/800/600",
+      "imageUrl": "/images/CDMX/73382883-88ee-4058-ba00-de8d0b721d9d_onora-visit.avif",
       "imageHint": "mexican crafts"
     },
     {
       "id": "cdmx-xinu",
       "description": "Xinú Perfumería boutique",
-      "imageUrl": "https://picsum.photos/seed/xinu/800/600",
+      "imageUrl": "/images/CDMX/InteriorDesign_Aug2024_xinu-2.jpg",
       "imageHint": "perfume boutique"
     }
 ];

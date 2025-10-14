@@ -19,79 +19,79 @@ const images: ImagePlaceholder[] = [
     {
       "id": "activity-horseback",
       "description": "People riding horses on a beach",
-      "imageUrl": "https://picsum.photos/seed/horseback/600/400",
+      "imageUrl": "/images/actividades/22a3c9_ea3a0aab276845788ea38c46bcedac26~mv2.jpg",
       "imageHint": "horseback riding beach"
     },
     {
       "id": "activity-diving",
       "description": "Scuba diver underwater with coral reef",
-      "imageUrl": "https://picsum.photos/seed/scubadiving/600/400",
+      "imageUrl": "/images/actividades/6c1a0008069a75c8081cd178111d7c8b.webp",
       "imageHint": "scuba diving"
     },
     {
       "id": "activity-ocean-safari",
       "description": "A boat on the ocean during a safari tour",
-      "imageUrl": "https://picsum.photos/seed/oceansafari/600/400",
+      "imageUrl": "/images/actividades/22a3c9_2f63e83d997e4cb586259caff1d5a363~mv2.jpg",
       "imageHint": "ocean safari"
     },
     {
       "id": "activity-golf",
       "description": "A beautiful golf course by the ocean",
-      "imageUrl": "https://picsum.photos/seed/golfcourse/600/400",
+      "imageUrl": "/images/actividades/01-Club-Campestre-Hole-14-Pano.jpg",
       "imageHint": "golf course"
     },
     {
       "id": "activity-whale-shark",
       "description": "A person swimming near a large whale shark",
-      "imageUrl": "https://picsum.photos/seed/whaleshark/600/400",
+      "imageUrl": "/images/actividades/El-tiburon-ballena-el-pez-mas-grande-del-mundo-que-es-visible-en-La-Paz-3.webp",
       "imageHint": "whale shark"
     },
     {
       "id": "activity-sol-de-mayo",
       "description": "A waterfall in a canyon",
-      "imageUrl": "https://picsum.photos/seed/soldemayo/600/400",
+      "imageUrl": "/images/actividades/la-cascada-vista-desde.jpg",
       "imageHint": "canyon waterfall"
     },
     {
       "id": "activity-surf",
       "description": "A person learning to surf",
-      "imageUrl": "https://picsum.photos/seed/surfclass/600/400",
+      "imageUrl": "/images/actividades/Monuments.jpg",
       "imageHint": "surf lesson"
     },
     {
       "id": "activity-art-walk",
       "description": "A colorful street during an art walk event",
-      "imageUrl": "https://picsum.photos/seed/artwalk/600/400",
+      "imageUrl": "/images/actividades/WhatsApp Image 2025-07-30 at 18_38_23.jpeg",
       "imageHint": "art walk"
     },
     {
       "id": "restaurant-acre",
       "description": "A stylish restaurant in a lush, natural setting",
-      "imageUrl": "https://picsum.photos/seed/acrerestaurant/600/400",
+      "imageUrl": "/images/actividades/68612693-3.webp",
       "imageHint": "jungle restaurant"
     },
     {
       "id": "restaurant-flora-farms",
       "description": "A rustic farm-to-table restaurant",
-      "imageUrl": "https://picsum.photos/seed/florafarms/600/400",
+      "imageUrl": "/images/actividades/Flora_Farms-San_Jose_del_Cabo-Mexico-1.jpg",
       "imageHint": "farm restaurant"
     },
     {
       "id": "restaurant-tamarindos",
       "description": "An elegant restaurant with outdoor seating",
-      "imageUrl": "https://picsum.photos/seed/tamarindos/600/400",
+      "imageUrl": "/images/actividades/tamarindos-mexican-farm-to-table-restaurant1-feat-img.webp",
       "imageHint": "elegant restaurant"
     },
     {
       "id": "restaurant-la-lupita",
       "description": "A lively taqueria with a vibrant atmosphere",
-      "imageUrl": "https://picsum.photos/seed/lalupita/600/400",
+      "imageUrl": "/images/actividades/22a3c9_4be7dfef89f6492eb735ca5117212a44~mv2.png",
       "imageHint": "mexican taqueria"
     },
     {
       "id": "restaurant-toro-guero",
       "description": "A local seafood restaurant",
-      "imageUrl": "https://picsum.photos/seed/toroguero/600/400",
+      "imageUrl": "/images/actividades/la-lupita-040-01.jpg",
       "imageHint": "seafood restaurant"
     }
 ];

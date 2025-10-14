@@ -11,7 +11,6 @@ import { Locale } from "@/lib/i18n-config";
 
 type ImagePlaceholder = {
   id: string;
-  description: string;
   imageUrl: string;
   imageHint: string;
 };
@@ -19,32 +18,27 @@ type ImagePlaceholder = {
 const images: ImagePlaceholder[] = [
     {
       "id": "hotel-el-ganzo",
-      "description": "Exterior view of the stylish Hotel El Ganzo",
-      "imageUrl": "https://picsum.photos/seed/elganzo/600/400",
+      "imageUrl": "/images/Hotel/Hotel-El-Ganzo-15.jpg",
       "imageHint": "luxury boutique hotel"
     },
     {
       "id": "hotel-la-marina",
-      "description": "Charming view of Hotel La Marina Inn",
-      "imageUrl": "https://picsum.photos/seed/lamarina/600/400",
+      "imageUrl": "/images/Hotel/hotel-and-restaurant.jpg",
       "imageHint": "cozy inn mexico"
     },
     {
       "id": "jw-marriott",
-      "description": "Luxury area of JW Marriott hotel",
-      "imageUrl": "https://picsum.photos/seed/jwmarriott/600/400",
+      "imageUrl": "/images/Hotel/Areas del Hotel 15_jpg.webp",
       "imageHint": "luxury hotel resort"
     },
     {
       "id": "ritz-carlton",
-      "description": "Classic view of the Ritz Carlton hotel",
-      "imageUrl": "https://picsum.photos/seed/ritzcarlton/600/400",
+      "imageUrl": "/images/Hotel/rz-sjdzr-dsc09397-39606-Classic-Hor.webp",
       "imageHint": "classic hotel exterior"
     },
     {
       "id": "secrets-resort",
-      "description": "View of the Secrets resort",
-      "imageUrl": "https://picsum.photos/seed/secretsresort/600/400",
+      "imageUrl": "/images/Hotel/22a3c9_373e3a05ff8247ae9c5f0c6c7298836d~mv2.png",
       "imageHint": "beachfront resort"
     }
 ];
@@ -77,7 +71,7 @@ export default async function AccommodationPage({ params: { lang } }: { params: 
                         <div className="aspect-video relative">
                         <Image
                             src={image.imageUrl}
-                            alt={image.description}
+                            alt={hotel.imageDescription}
                             fill
                             className="object-cover"
                             data-ai-hint={image.imageHint}
