@@ -10,24 +10,24 @@
 
 @layer base {
   :root {
-    --background: 40 25% 97%;
+    --background: 48 33% 96%; /* off-white/bone (#FAF9F6) */
     --foreground: 240 10% 3.9%;
-    --card: 40 25% 97%;
+    --card: 48 33% 96%;
     --card-foreground: 240 10% 3.9%;
-    --popover: 40 25% 97%;
+    --popover: 48 33% 96%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 64% 27%;
+    --primary: 240 64% 27%; /* navy blue (#191970) */
     --primary-foreground: 0 0% 98%;
-    --secondary: 60 56% 91%;
+    --secondary: 60 30% 86%; /* sand beige (#F5F5DC) */
     --secondary-foreground: 240 64% 27%;
-    --muted: 60 56% 91%;
+    --muted: 60 30% 86%;
     --muted-foreground: 240 5% 65%;
-    --accent: 60 56% 91%;
-    --accent-foreground: 240 64% 27%;
+    --accent: 240 64% 27%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 60 40% 88%;
-    --input: 60 40% 88%;
+    --border: 60 30% 80%;
+    --input: 60 30% 80%;
     --ring: 240 64% 27%;
     --radius: 0.8rem;
     --chart-1: 12 76% 61%;
