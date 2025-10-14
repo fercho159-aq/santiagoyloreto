@@ -112,7 +112,15 @@
         "airportTitle": "Airport & Flights",
         "airportBody1": "The main point of arrival is the Los Cabos International Airport (SJD).",
         "airportBody2": "For international travelers, we recommend a layover in Mexico City before heading to Los Cabos. There are daily direct flights from major cities in Mexico and the United States.",
-        "exampleRoutes": "Example routes:",
+        "exampleRoutes": {
+            "title": "Example routes:",
+            "routes": [
+                "Los Ángeles – SJD",
+                "Ciudad de México – SJD",
+                "Madrid – Los Ángeles - SJD",
+                "Madrid – Ciudad de México - SJD"
+            ]
+        },
         "groundTransportTitle": "Ground Transportation",
         "groundTransportBody1": "If you choose to rent a car, you will find most rental companies available at SJD airport. We recommend booking in advance.",
         "groundTransportBody2": "If you prefer a private driver, we recommend arranging it directly through your hotel for convenience and safety.",
@@ -142,16 +150,11 @@
             { "leg": "RETURN (Yetti -> El Ganzo)", "time": "2:30 PM - 7:30 PM", "details": "Departures every 15 min" }
         ],
         "locations": {
-            "el_ganzo_events": "Welcome Cocktail, Pool Party",
-            "yetti_events": "Ceremony, Reception",
-            "sculpture_garden_events": "Farewell Brunch",
-            "crania_events": "Dinner & Party"
-        },
-        "location_names": {
             "el_ganzo": "Hotel El Ganzo",
             "yetti": "Yetti",
             "sculpture_garden": "Jardín de las Esculturas",
-            "crania": "Crania"
+            "crania": "Crania",
+            "la_marina_inn": "Hotel La Marina Inn"
         },
         "faqs": {
             "q1": "What do 'Beach Casual' and 'Formal' mean?",
@@ -167,16 +170,6 @@
             "a3": "You are in paradise! We recommend exploring the historic center of San José del Cabo, especially the 'Art Walk' on Thursday night. You can also enjoy the beaches (Playa Palmilla is beautiful), take a surf class, or a boat tour to the Arch of Cabo San Lucas.",
             "q4": "Do I need to RSVP for each event separately?",
             "a4": "It's not necessary. By completing the RSVP form on this website, we will understand that you will attend all scheduled events for the weekend. If for any reason you cannot attend a particular event, please let us know personally."
-        },
-        "other_activities": {
-            "horse_riding": "Horseback Riding",
-            "diving": "Diving",
-            "ocean_safari": "Ocean Safari",
-            "golf": "Golf",
-            "whale_shark": "Whale Shark",
-            "sol_de_mayo": "Sol de Mayo",
-            "surf_lessons": "Surf Lessons",
-            "art_walk": "Art Walk"
         },
         "days": {
             "thursday": "Thursday",

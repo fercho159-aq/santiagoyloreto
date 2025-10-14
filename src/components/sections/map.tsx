@@ -19,7 +19,7 @@ type MapSectionProps = {
 const mapImage = {
   id: "map-illustration",
   description: "Hand-drawn cartography style map of the wedding locations",
-  imageUrl: "/images/mapa.jpg",
+  imageUrl: "https://picsum.photos/seed/mapa/1200/900",
   imageHint: "cartography map sketch"
 };
 
@@ -35,15 +35,13 @@ export default function MapSection({ dictionary, locations }: MapSectionProps) {
         </div>
         
         <div className="relative max-w-5xl mx-auto aspect-[4/3] rounded-lg overflow-hidden shadow-2xl border-4 border-secondary">
-          {mapImage && (
-            <Image
-              src={mapImage.imageUrl}
-              alt={mapImage.description}
-              fill
-              className="object-cover"
-              data-ai-hint={mapImage.imageHint}
-            />
-          )}
+          <Image
+            src="https://picsum.photos/seed/mapa/1200/900"
+            alt={mapImage.description}
+            fill
+            className="object-cover"
+            data-ai-hint={mapImage.imageHint}
+          />
 
           {locations.map((location) => (
              <Popover key={location.id}>

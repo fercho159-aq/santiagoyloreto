@@ -34,12 +34,11 @@ export default async function TravelPage({ params: { lang } }: { params: { lang:
                         <p className="text-lg">{pageDict.airportBody1}</p>
                         <p>{pageDict.airportBody2}</p>
                         <div>
-                            <h4 className="font-semibold text-foreground mb-2">{pageDict.exampleRoutes}</h4>
+                            <h4 className="font-semibold text-foreground mb-2">{pageDict.exampleRoutes.title}</h4>
                             <ul className="list-disc pl-5 space-y-1">
-                                <li>Los Ángeles – SJD</li>
-                                <li>Ciudad de México – SJD</li>
-                                <li>Madrid – Los Ángeles - SJD</li>
-                                <li>Madrid – Ciudad de México - SJD</li>
+                                {pageDict.exampleRoutes.routes.map((route: string) => (
+                                    <li key={route}>{route}</li>
+                                ))}
                             </ul>
                         </div>
                     </CardContent>

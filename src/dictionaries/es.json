@@ -112,7 +112,15 @@
         "airportTitle": "Aeropuerto y Vuelos",
         "airportBody1": "El principal punto de llegada es el Aeropuerto Internacional de Los Cabos (SJD).",
         "airportBody2": "Para viajeros internacionales, recomendamos hacer escala en la Ciudad de México antes de dirigirse a Los Cabos. Hay vuelos directos diarios desde las principales ciudades de México y Estados Unidos.",
-        "exampleRoutes": "Rutas de ejemplo:",
+        "exampleRoutes": {
+            "title": "Rutas de ejemplo:",
+            "routes": [
+                "Los Ángeles – SJD",
+                "Ciudad de México – SJD",
+                "Madrid – Los Ángeles - SJD",
+                "Madrid – Ciudad de México - SJD"
+            ]
+        },
         "groundTransportTitle": "Transporte Terrestre",
         "groundTransportBody1": "Si opta por alquilar un coche, encontrará la mayoría de las compañías de alquiler disponibles en el aeropuerto SJD. Recomendamos reservar con antelación.",
         "groundTransportBody2": "Si prefiere un conductor privado, le recomendamos contratarlo directamente a través de su hotel para mayor comodidad y seguridad.",
@@ -142,16 +150,11 @@
             { "leg": "REGRESO (Yetti -> El Ganzo)", "time": "2:30 PM - 7:30 PM", "details": "Salidas cada 15 min" }
         ],
         "locations": {
-            "el_ganzo_events": "Cóctel de Bienvenida, Pool Party",
-            "yetti_events": "Ceremonia, Recepción",
-            "sculpture_garden_events": "Brunch de Despedida",
-            "crania_events": "Cena y Fiesta"
-        },
-        "location_names": {
             "el_ganzo": "Hotel El Ganzo",
             "yetti": "Yetti",
             "sculpture_garden": "Jardín de las Esculturas",
-            "crania": "Crania"
+            "crania": "Crania",
+            "la_marina_inn": "Hotel La Marina Inn"
         },
         "faqs": {
             "q1": "¿Qué significa 'Beach Casual' y 'Formal'?",
