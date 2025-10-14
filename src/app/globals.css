@@ -18,16 +18,16 @@
     --popover-foreground: 240 10% 3.9%;
     --primary: 215 26% 46%; /* new blue (#587194) */
     --primary-foreground: 0 0% 98%;
-    --secondary: 60 30% 86%; /* sand beige (#F5F5DC) */
+    --secondary: 220 20% 86%; /* light blue (#d4d9e1) */
     --secondary-foreground: 215 26% 46%;
-    --muted: 60 30% 86%;
+    --muted: 220 20% 86%;
     --muted-foreground: 240 5% 65%;
     --accent: 215 26% 46%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 60 30% 80%;
-    --input: 60 30% 80%;
+    --border: 220 20% 80%;
+    --input: 220 20% 80%;
     --ring: 215 26% 46%;
     --radius: 0.8rem;
     --chart-1: 12 76% 61%;
