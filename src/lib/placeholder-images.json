@@ -155,6 +155,108 @@
       "description": "A local seafood restaurant",
       "imageUrl": "https://picsum.photos/seed/toroguero/600/400",
       "imageHint": "seafood restaurant"
+    },
+    {
+      "id": "cdmx-soho-house",
+      "description": "Soho House in Mexico City",
+      "imageUrl": "https://picsum.photos/seed/sohohouse/800/600",
+      "imageHint": "luxury hotel"
+    },
+    {
+      "id": "cdmx-condesa-df",
+      "description": "Condesa DF Hotel",
+      "imageUrl": "https://picsum.photos/seed/condesadf/800/600",
+      "imageHint": "boutique hotel"
+    },
+    {
+      "id": "cdmx-octavia-casa",
+      "description": "Octavia Casa hotel interior",
+      "imageUrl": "https://picsum.photos/seed/octaviacasa/800/600",
+      "imageHint": "minimalist hotel"
+    },
+    {
+      "id": "cdmx-chapultepec",
+      "description": "Chapultepec Castle",
+      "imageUrl": "https://picsum.photos/seed/chapultepec/800/600",
+      "imageHint": "castle cdmx"
+    },
+    {
+      "id": "cdmx-frida-kahlo",
+      "description": "Frida Kahlo Museum (Casa Azul)",
+      "imageUrl": "https://picsum.photos/seed/fridakahlo/800/600",
+      "imageHint": "frida kahlo"
+    },
+    {
+      "id": "cdmx-desfile",
+      "description": "Day of the Dead parade in Mexico City",
+      "imageUrl": "https://picsum.photos/seed/diademuertos/800/600",
+      "imageHint": "parade skulls"
+    },
+    {
+      "id": "cdmx-casa-gilardi",
+      "description": "Casa Gilardi by Luis Barragan",
+      "imageUrl": "https://picsum.photos/seed/casagilardi/800/600",
+      "imageHint": "modernist architecture"
+    },
+    {
+      "id": "cdmx-bellas-artes",
+      "description": "Palacio de Bellas Artes",
+      "imageUrl": "https://picsum.photos/seed/bellasartes/800/600",
+      "imageHint": "art deco"
+    },
+    {
+      "id": "cdmx-panaderia-rosetta",
+      "description": "Interior of Panaderia Rosetta",
+      "imageUrl": "https://picsum.photos/seed/panaderiarosetta/800/600",
+      "imageHint": "artisan bakery"
+    },
+    {
+      "id": "cdmx-maizajo",
+      "description": "Tacos from Maizajo",
+      "imageUrl": "https://picsum.photos/seed/maizajo/800/600",
+      "imageHint": "gourmet tacos"
+    },
+    {
+      "id": "cdmx-expendio-maiz",
+      "description": "Expendio de Maíz restaurant",
+      "imageUrl": "https://picsum.photos/seed/expendiomaiz/800/600",
+      "imageHint": "traditional mexican food"
+    },
+    {
+      "id": "cdmx-rosetta",
+      "description": "Rosetta restaurant dining room",
+      "imageUrl": "https://picsum.photos/seed/rosetta/800/600",
+      "imageHint": "italian restaurant"
+    },
+    {
+      "id": "cdmx-maximo-bistrot",
+      "description": "A dish from Máximo Bistrot",
+      "imageUrl": "https://picsum.photos/seed/maximobistrot/800/600",
+      "imageHint": "fine dining"
+    },
+    {
+      "id": "cdmx-lardo",
+      "description": "Lardo restaurant ambiance",
+      "imageUrl": "https://picsum.photos/seed/lardo/800/600",
+      "imageHint": "casual dining"
+    },
+    {
+      "id": "cdmx-pujol",
+      "description": "The interior of Pujol restaurant",
+      "imageUrl": "https://picsum.photos/seed/pujol/800/600",
+      "imageHint": "michelin star"
+    },
+    {
+      "id": "cdmx-onora",
+      "description": "Handcrafted items at Onora Casa",
+      "imageUrl": "https://picsum.photos/seed/onoracasa/800/600",
+      "imageHint": "mexican crafts"
+    },
+    {
+      "id": "cdmx-xinu",
+      "description": "Xinú Perfumería boutique",
+      "imageUrl": "https://picsum.photos/seed/xinu/800/600",
+      "imageHint": "perfume boutique"
     }
   ]
 }

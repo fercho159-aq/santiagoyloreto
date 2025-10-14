@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { WeddingRingIcon } from "../icons";
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { name: "Agenda", href: "/#agenda" },
@@ -14,6 +15,7 @@ const navLinks = [
   { name: "Viaje", href: "/viaje" },
   { name: "Vestimenta", href: "/vestimenta" },
   { name: "Otras Actividades", href: "/otras-actividades" },
+  { name: "CDMX", href: "/cdmx" },
   { name: "Dudas", href: "/#dudas" },
   { name: "RSVP", href: "/#rsvp" },
 ];
@@ -21,6 +23,7 @@ const navLinks = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +34,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const getLinkPath = (href: string) => {
+    if (pathname !== '/' && href.startsWith('/#')) {
+      return `/${href}`;
+    }
+    return href;
+  }
 
   return (
     <header
