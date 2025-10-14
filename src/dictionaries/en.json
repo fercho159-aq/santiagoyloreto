@@ -149,6 +149,12 @@
             "sculpture_garden_events": "Farewell Brunch",
             "crania_events": "Dinner & Party"
         },
+        "location_names": {
+            "el_ganzo": "Hotel El Ganzo",
+            "yetti": "Yetti",
+            "sculpture_garden": "Jardín de las Esculturas",
+            "crania": "Crania"
+        },
         "faqs": {
             "q1": "What do 'Beach Casual' and 'Formal' mean?",
             "a1_casual_title": "Beach Casual:",

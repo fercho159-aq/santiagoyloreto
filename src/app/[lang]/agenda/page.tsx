@@ -13,12 +13,12 @@ export default async function AgendaPage({ params: { lang } }: { params: { lang:
   const dataDict = dict.data;
 
   const events = [
-    { dayKey: "thursday", titleKey: "welcome_cocktail", time: "7:00 PM - 10:00 PM", location: "Hotel El Ganzo", dressCodeKey: "beach_casual", icon: eventsData[0].icon },
-    { dayKey: "friday", titleKey: "ceremony", time: "1:00 PM - 2:30 PM", location: "Yetti", dressCodeKey: "beach_formal", icon: eventsData[1].icon },
-    { dayKey: "friday", titleKey: "reception", time: "2:30 PM - 7:30 PM", location: "Yetti", dressCodeKey: "beach_formal", icon: eventsData[2].icon },
-    { dayKey: "saturday", titleKey: "pool_party", time: "12:00 PM - 5:00 PM", location: "Hotel El Ganzo", dressCodeKey: "swimsuit", icon: eventsData[3].icon },
-    { dayKey: "saturday", titleKey: "dinner_party", time: "8:00 PM - 2:00 AM", location: "Crania", dressCodeKey: "formal", icon: eventsData[4].icon },
-    { dayKey: "sunday", titleKey: "farewell_brunch", time: "10:00 AM - 1:00 PM", location: "Jardín de las Esculturas", dressCodeKey: "casual", icon: eventsData[5].icon },
+    { dayKey: "thursday", titleKey: "welcome_cocktail", time: "7:00 PM - 10:00 PM", locationKey: "el_ganzo", dressCodeKey: "beach_casual", icon: eventsData[0].icon },
+    { dayKey: "friday", titleKey: "ceremony", time: "1:00 PM - 2:30 PM", locationKey: "yetti", dressCodeKey: "beach_formal", icon: eventsData[1].icon },
+    { dayKey: "friday", titleKey: "reception", time: "2:30 PM - 7:30 PM", locationKey: "yetti", dressCodeKey: "beach_formal", icon: eventsData[2].icon },
+    { dayKey: "saturday", titleKey: "pool_party", time: "12:00 PM - 5:00 PM", locationKey: "el_ganzo", dressCodeKey: "swimsuit", icon: eventsData[3].icon },
+    { dayKey: "saturday", titleKey: "dinner_party", time: "8:00 PM - 2:00 AM", locationKey: "crania", dressCodeKey: "formal", icon: eventsData[4].icon },
+    { dayKey: "sunday", titleKey: "farewell_brunch", time: "10:00 AM - 1:00 PM", locationKey: "sculpture_garden", dressCodeKey: "casual", icon: eventsData[5].icon },
   ];
   
   const boatSchedule = [
@@ -67,7 +67,7 @@ export default async function AgendaPage({ params: { lang } }: { params: { lang:
                              </CardHeader>
                              <CardContent className="space-y-3 text-muted-foreground">
                                <p><strong>{agendaDict.schedule.time}:</strong> {event.time}</p>
-                               <p><strong>{agendaDict.schedule.location}:</strong> {event.location}</p>
+                               <p><strong>{agendaDict.schedule.location}:</strong> {dataDict.location_names[event.locationKey as keyof typeof dataDict.location_names]}</p>
                                <p><strong>{agendaDict.schedule.dressCode}:</strong> {dataDict.dress_codes[event.dressCodeKey as keyof typeof dataDict.dress_codes]}</p>
                              </CardContent>
                            </Card>
