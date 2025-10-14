@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Agenda", href: "/#agenda" },
   { name: "Campus", href: "/#campus" },
   { name: "Hospedaje", href: "/alojamiento" },
+  { name: "Viaje", href: "/viaje" },
   { name: "Dudas", href: "/#dudas" },
   { name: "RSVP", href: "/#rsvp" },
 ];
