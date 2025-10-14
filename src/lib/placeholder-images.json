@@ -23,6 +23,24 @@
       "description": "Charming view of Hotel La Marina Inn",
       "imageUrl": "https://picsum.photos/seed/lamarina/600/400",
       "imageHint": "cozy inn mexico"
+    },
+    {
+      "id": "jw-marriott",
+      "description": "Luxury area of JW Marriott hotel",
+      "imageUrl": "https://picsum.photos/seed/jwmarriott/600/400",
+      "imageHint": "luxury hotel resort"
+    },
+    {
+      "id": "ritz-carlton",
+      "description": "Classic view of the Ritz Carlton hotel",
+      "imageUrl": "https://picsum.photos/seed/ritzcarlton/600/400",
+      "imageHint": "classic hotel exterior"
+    },
+    {
+      "id": "secrets-resort",
+      "description": "View of the Secrets resort",
+      "imageUrl": "https://picsum.photos/seed/secretsresort/600/400",
+      "imageHint": "beachfront resort"
     }
   ]
 }
