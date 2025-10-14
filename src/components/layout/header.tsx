@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Campus", href: "/#campus" },
   { name: "Hospedaje", href: "/alojamiento" },
   { name: "Viaje", href: "/viaje" },
+  { name: "Vestimenta", href: "/vestimenta" },
   { name: "Dudas", href: "/#dudas" },
   { name: "RSVP", href: "/#rsvp" },
 ];
@@ -19,14 +20,25 @@ const navLinks = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
+    
+    setCurrentPath(window.location.pathname);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const getLinkPath = (href: string) => {
+    if (href.startsWith("/#") && currentPath !== "/") {
+      return `/${href}`;
+    }
+    return href;
+  }
 
   return (
     <header
@@ -47,7 +59,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={link.href}
+              href={getLinkPath(link.href)}
               className="font-semibold text-primary/80 transition-colors hover:text-primary"
             >
               {link.name}
@@ -75,7 +87,7 @@ export default function Header() {
                   {navLinks.map((link) => (
                     <Link
                       key={link.name}
-                      href={link.href}
+                      href={getLinkPath(link.href)}
                       className="text-xl font-semibold text-primary/80 transition-colors hover:text-primary"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
