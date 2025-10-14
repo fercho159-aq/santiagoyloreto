@@ -8,11 +8,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { WeddingRingIcon } from "../icons";
 
 const navLinks = [
-  { name: "Agenda", href: "#agenda" },
-  { name: "Campus", href: "#campus" },
-  { name: "Hospedaje", href: "#hospedaje" },
-  { name: "Dudas", href: "#dudas" },
-  { name: "RSVP", href: "#rsvp" },
+  { name: "Agenda", href: "/#agenda" },
+  { name: "Campus", href: "/#campus" },
+  { name: "Hospedaje", href: "/alojamiento" },
+  { name: "Dudas", href: "/#dudas" },
+  { name: "RSVP", href: "/#rsvp" },
 ];
 
 export default function Header() {
@@ -26,6 +26,17 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
+  const getLinkPath = (href: string) => {
+    if (href.startsWith('/#')) {
+        // Check if we are on the homepage
+        if (typeof window !== 'undefined' && window.location.pathname === '/') {
+            return href.substring(1); // Return anchor only
+        }
+        return href; // Return full path with anchor
+    }
+    return href; // For external/other pages
+  }
 
   return (
     <header
@@ -46,7 +57,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={link.href}
+              href={getLinkPath(link.href)}
               className="font-semibold text-primary/80 transition-colors hover:text-primary"
             >
               {link.name}
@@ -63,7 +74,7 @@ export default function Header() {
             <SheetContent side="right" className="w-[300px] bg-background">
               <div className="flex h-full flex-col p-6">
                 <div className="flex items-center justify-between">
-                   <Link href="/" className="flex items-center gap-2">
+                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <WeddingRingIcon className="h-6 w-6 text-primary" />
                     <span className="font-headline text-xl font-semibold text-primary">
                       Loreto & Santiago

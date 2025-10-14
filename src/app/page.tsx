@@ -10,16 +10,16 @@ import RsvpSection from '@/components/sections/rsvp'
 export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground font-body">
-      <Header />
       <main className="flex-1">
+        <Header />
         <HeroSection />
         <ItinerarySection />
         <MapSection />
         <AccommodationSection />
         <FaqSection />
         <RsvpSection />
+        <Footer />
       </main>
-      <Footer />
     </div>
   )
 }
