@@ -12,26 +12,9 @@ import { Locale } from "@/lib/i18n-config";
 export default async function OtherActivitiesPage({ params: { lang } }: { params: { lang: Locale } }) {
     const dict = await getDictionary(lang);
     const pageDict = dict.otherActivitiesPage;
-    const dataDict = dict.data.other_activities;
     
-    const activities = [
-        { id: "activity-horseback", name: dataDict.horse_riding, link: "#" },
-        { id: "activity-diving", name: dataDict.diving, link: "#" },
-        { id: "activity-ocean-safari", name: dataDict.ocean_safari, link: "#" },
-        { id: "activity-golf", name: dataDict.golf, link: "https://www.questrogolf.com/", code: "Boda Loreto & Santiago", phone: "624-173-9400", email: "reservations@questrogolf.com" },
-        { id: "activity-whale-shark", name: dataDict.whale_shark, link: "#" },
-        { id: "activity-sol-de-mayo", name: dataDict.sol_de_mayo, link: "#" },
-        { id: "activity-surf", name: dataDict.surf_lessons, link: "#" },
-        { id: "activity-art-walk", name: dataDict.art_walk, link: "#" },
-    ];
-
-    const restaurants = [
-        { id: "restaurant-acre", name: "ACRE", link: "https://www.acreresort.com/" },
-        { id: "restaurant-flora-farms", name: "Flora Farms", link: "https://www.flora-farms.com/" },
-        { id: "restaurant-tamarindos", name: "Tamarindos", link: "https://tamarindos.mx/" },
-        { id: "restaurant-la-lupita", name: "La Lupita", link: "https://lalupitatym.com/" },
-        { id: "restaurant-toro-guero", name: "Toro Güero", link: "#" },
-    ];
+    const activities = dict.data.other_activities_list;
+    const restaurants = dict.data.restaurants_list;
 
     const getImage = (id: string) => PlaceHolderImages.find((img) => img.id === id);
 
@@ -50,7 +33,7 @@ export default async function OtherActivitiesPage({ params: { lang } }: { params
 
             <section id="activities">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
-                {activities.map(item => {
+                {activities.map((item: any) => {
                   const image = getImage(item.id);
                   return (
                     <Card key={item.id} className="bg-background shadow-lg overflow-hidden flex flex-col">
@@ -111,7 +94,7 @@ export default async function OtherActivitiesPage({ params: { lang } }: { params
 
             <section id="restaurants">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
-                {restaurants.map(item => {
+                {restaurants.map((item: any) => {
                   const image = getImage(item.id);
                   return (
                      <Card key={item.id} className="bg-background shadow-lg overflow-hidden flex flex-col">

@@ -136,13 +136,11 @@
             "formal": "Formal",
             "casual": "Casual"
         },
-        "boat_schedule": {
-            "to_yetti": "IDA (El Ganzo -> Yetti)",
-            "pause": "PAUSA (Durante la Misa)",
-            "to_ganzo": "REGRESO (Yetti -> El Ganzo)",
-            "departures": "Salidas cada 15 min",
-            "suspended": "Servicio suspendido"
-        },
+        "boat_schedule": [
+            { "leg": "IDA (El Ganzo -> Yetti)", "time": "12:00 PM - 1:00 PM", "details": "Salidas cada 15 min" },
+            { "leg": "PAUSA (Durante la Misa)", "time": "1:00 PM - 2:30 PM", "details": "Servicio suspendido" },
+            { "leg": "REGRESO (Yetti -> El Ganzo)", "time": "2:30 PM - 7:30 PM", "details": "Salidas cada 15 min" }
+        ],
         "locations": {
             "el_ganzo_events": "Cóctel de Bienvenida, Pool Party",
             "yetti_events": "Ceremonia, Recepción",
@@ -170,29 +168,99 @@
             "q4": "¿Necesito confirmar mi asistencia a cada evento por separado?",
             "a4": "No es necesario. Con que completes el formulario de RSVP en esta web, entenderemos que asistirás a todos los eventos programados para el fin de semana. Si por alguna razón no puedes asistir a un evento en particular, por favor avísanos personalmente."
         },
-        "other_activities": {
-            "horse_riding": "Montar a Caballo",
-            "diving": "Buceo",
-            "ocean_safari": "Safari Oceánico",
-            "golf": "Golf",
-            "whale_shark": "Tiburón Ballena",
-            "sol_de_mayo": "Sol de Mayo",
-            "surf_lessons": "Clases de Surf",
-            "art_walk": "Art Walk"
-        },
-        "cdmx_activities": {
-            "chapultepec_castle": "Castillo de Chapultepec",
-            "frida_kahlo_museum": "Museo Frida Kahlo",
-            "day_of_the_dead_parade": "Desfile Día de los Muertos",
-            "maize_shop": "Expendio de Maíz",
-            "xinu_perfumery": "Perfumería Xinú"
-        },
         "days": {
             "thursday": "Jueves",
             "friday": "Viernes",
             "saturday": "Sábado",
             "sunday": "Domingo"
         },
-        "wedding_name_code": "Boda Loreto & Santiago"
+        "wedding_name_code": "Boda Loreto & Santiago",
+        "hotels": [
+            {
+                "imageId": "hotel-el-ganzo",
+                "name": "Hotel El Ganzo",
+                "bookingCode": "2511LORETO",
+                "phone": "+52 624 104 9000",
+                "email": "reservas@elganzo.com",
+                "bookingLink": "#"
+            },
+            {
+                "imageId": "hotel-la-marina",
+                "name": "Marina Inn",
+                "bookingCode": "Boda Loreto & Santiago",
+                "phone": "+1 310 272 9244 / +52 524 142 4166",
+                "email": "manager@lamarinainn.com",
+                "bookingLink": null
+            },
+            {
+                "imageId": "jw-marriott",
+                "name": "JW Marriott - Casa Maat",
+                "bookingCode": "Boda Loreto & Santiago",
+                "contactPerson": "Carlos Davis",
+                "phone": "+52 624 163 7625",
+                "email": "jwlc.greservaciones@grupodiestra.com",
+                "bookingLink": "#"
+            },
+            {
+                "imageId": "ritz-carlton",
+                "name": "Ritz Carlton",
+                "bookingCode": "BSL",
+                "phone": "+52 624 172 9000 / +52 624 121 2880",
+                "email": "reservas.zadun@ritzcarlton.com",
+                "bookingLink": "#"
+            },
+            {
+                "imageId": "secrets-resort",
+                "name": "Secrets",
+                "bookingCode": "Santiago & Loreto",
+                "phone": null,
+                "email": "martha.arangure@secretsresorts.com",
+                "bookingLink": null
+            }
+        ],
+        "cdmx_sections": {
+            "accommodation": [
+                { "id": "cdmx-soho-house", "name": "Soho House", "link": "https://www.sohohouse.com/houses/soho-house-mexico-city" },
+                { "id": "cdmx-condesa-df", "name": "Condesa DF", "link": "https://www.condesadf.com/" },
+                { "id": "cdmx-octavia-casa", "name": "Octavia Casa", "link": "https://octaviacasa.com/" }
+            ],
+            "whatToDo": [
+                { "id": "cdmx-chapultepec", "name": "Castillo de Chapultepec", "link": "https://mnh.inah.gob.mx/" },
+                { "id": "cdmx-frida-kahlo", "name": "Museo Frida Kahlo", "link": "https://www.museofridakahlo.org.mx/" },
+                { "id": "cdmx-desfile", "name": "Desfile Día de los Muertos", "link": "#" },
+                { "id": "cdmx-casa-gilardi", "name": "Casa Gilardi Luis Barragán", "link": "https://www.casagilardi.mx/" },
+                { "id": "cdmx-bellas-artes", "name": "Bellas Artes", "link": "https://palacio.inba.gob.mx/" }
+            ],
+            "restaurants": [
+                { "id": "cdmx-panaderia-rosetta", "name": "Panadería Rosetta", "link": "https://www.rosetta.com.mx/panaderia/" },
+                { "id": "cdmx-maizajo", "name": "Tacos de Maizajo", "link": "https://www.maizajo.com/" },
+                { "id": "cdmx-expendio-maiz", "name": "Expendio de Maíz", "link": "#" },
+                { "id": "cdmx-rosetta", "name": "Rosetta", "link": "https://www.rosetta.com.mx/" },
+                { "id": "cdmx-maximo-bistrot", "name": "Máximo Bistrot", "link": "https://maximobistrot.com.mx/" },
+                { "id": "cdmx-lardo", "name": "Lardo", "link": "https://www.lardo.mx/" },
+                { "id": "cdmx-pujol", "name": "Pujol", "link": "https://pujol.com.mx/" }
+            ],
+            "shopping": [
+                { "id": "cdmx-onora", "name": "Onora Casa", "link": "https://onoracasa.com/" },
+                { "id": "cdmx-xinu", "name": "Perfumería Xinú", "link": "https://xinu.mx/" }
+            ]
+        },
+        "other_activities_list": [
+            { "id": "activity-horseback", "name": "Montar a Caballo", "link": "#" },
+            { "id": "activity-diving", "name": "Buceo", "link": "#" },
+            { "id": "activity-ocean-safari", "name": "Safari Oceánico", "link": "#" },
+            { "id": "activity-golf", "name": "Golf", "link": "https://www.questrogolf.com/", "code": "Boda Loreto & Santiago", "phone": "624-173-9400", "email": "reservations@questrogolf.com" },
+            { "id": "activity-whale-shark", "name": "Tiburón Ballena", "link": "#" },
+            { "id": "activity-sol-de-mayo", "name": "Sol de Mayo", "link": "#" },
+            { "id": "activity-surf", "name": "Clases de Surf", "link": "#" },
+            { "id": "activity-art-walk", "name": "Art Walk", "link": "#" }
+        ],
+        "restaurants_list": [
+            { "id": "restaurant-acre", "name": "ACRE", "link": "https://www.acreresort.com/" },
+            { "id": "restaurant-flora-farms", "name": "Flora Farms", "link": "https://www.flora-farms.com/" },
+            { "id": "restaurant-tamarindos", "name": "Tamarindos", "link": "https://tamarindos.mx/" },
+            { "id": "restaurant-la-lupita", "name": "La Lupita", "link": "https://lalupitatym.com/" },
+            { "id": "restaurant-toro-guero", "name": "Toro Güero", "link": "#" }
+        ]
     }
 }

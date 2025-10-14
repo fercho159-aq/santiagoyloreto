@@ -11,35 +11,8 @@ import { Locale } from "@/lib/i18n-config";
 export default async function CdmxPage({ params: { lang } }: { params: { lang: Locale } }) {
     const dict = await getDictionary(lang);
     const cdmxDict = dict.cdmxPage;
-    const dataDict = dict.data;
     
-    const sections = {
-        alojamiento: [
-            { id: "cdmx-soho-house", name: "Soho House", link: "https://www.sohohouse.com/houses/soho-house-mexico-city" },
-            { id: "cdmx-condesa-df", name: "Condesa DF", link: "https://www.condesadf.com/" },
-            { id: "cdmx-octavia-casa", name: "Octavia Casa", link: "https://octaviacasa.com/" },
-        ],
-        queHacer: [
-            { id: "cdmx-chapultepec", name: dataDict.cdmx_activities.chapultepec_castle, link: "https://mnh.inah.gob.mx/" },
-            { id: "cdmx-frida-kahlo", name: dataDict.cdmx_activities.frida_kahlo_museum, link: "https://www.museofridakahlo.org.mx/" },
-            { id: "cdmx-desfile", name: dataDict.cdmx_activities.day_of_the_dead_parade, link: "#" },
-            { id: "cdmx-casa-gilardi", name: "Casa Gilardi Luis Barragán", link: "https://www.casagilardi.mx/" },
-            { id: "cdmx-bellas-artes", name: "Bellas Artes", link: "https://palacio.inba.gob.mx/" },
-        ],
-        restaurantes: [
-            { id: "cdmx-panaderia-rosetta", name: "Panadería Rosetta", link: "https://www.rosetta.com.mx/panaderia/" },
-            { id: "cdmx-maizajo", name: "Tacos de Maizajo", link: "https://www.maizajo.com/" },
-            { id: "cdmx-expendio-maiz", name: dataDict.cdmx_activities.maize_shop, link: "#" },
-            { id: "cdmx-rosetta", name: "Rosetta", link: "https://www.rosetta.com.mx/" },
-            { id: "cdmx-maximo-bistrot", name: "Máximo Bistrot", link: "https://maximobistrot.com.mx/" },
-            { id: "cdmx-lardo", name: "Lardo", link: "https://www.lardo.mx/" },
-            { id: "cdmx-pujol", name: "Pujol", link: "https://pujol.com.mx/" },
-        ],
-        compras: [
-            { id: "cdmx-onora", name: "Onora Casa", link: "https://onoracasa.com/" },
-            { id: "cdmx-xinu", name: dataDict.cdmx_activities.xinu_perfumery, link: "https://xinu.mx/" },
-        ],
-    };
+    const sections = dict.data.cdmx_sections;
 
     const getImage = (id: string) => PlaceHolderImages.find((img) => img.id === id);
 
@@ -68,7 +41,7 @@ export default async function CdmxPage({ params: { lang } }: { params: { lang: L
                 <section>
                     <h2 className="font-headline text-3xl text-primary text-center mb-8">{cdmxDict.accommodation}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        {sections.alojamiento.map(item => {
+                        {sections.accommodation.map((item: any) => {
                             const image = getImage(item.id);
                             return (
                                 <Link href={item.link} target="_blank" key={item.id} className="block group">
@@ -91,7 +64,7 @@ export default async function CdmxPage({ params: { lang } }: { params: { lang: L
                 <section>
                     <h2 className="font-headline text-3xl text-primary text-center mb-8">{cdmxDict.whatToDo}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                        {sections.queHacer.map(item => {
+                        {sections.whatToDo.map((item: any) => {
                             const image = getImage(item.id);
                             return (
                                 <Link href={item.link} target="_blank" key={item.id} className="block group">
@@ -114,7 +87,7 @@ export default async function CdmxPage({ params: { lang } }: { params: { lang: L
                  <section>
                     <h2 className="font-headline text-3xl text-primary text-center mb-8">{cdmxDict.restaurants}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                        {sections.restaurantes.map(item => {
+                        {sections.restaurants.map((item: any) => {
                             const image = getImage(item.id);
                             return (
                                 <Link href={item.link} target="_blank" key={item.id} className="block group">
@@ -137,7 +110,7 @@ export default async function CdmxPage({ params: { lang } }: { params: { lang: L
                  <section>
                     <h2 className="font-headline text-3xl text-primary text-center mb-8">{cdmxDict.shopping}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                        {sections.compras.map(item => {
+                        {sections.shopping.map((item: any) => {
                             const image = getImage(item.id);
                             return (
                                 <Link href={item.link} target="_blank" key={item.id} className="block group">

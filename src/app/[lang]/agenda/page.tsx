@@ -21,11 +21,11 @@ export default async function AgendaPage({ params: { lang } }: { params: { lang:
     { dayKey: "sunday", titleKey: "farewell_brunch", time: "10:00 AM - 1:00 PM", locationKey: "sculpture_garden", dressCodeKey: "casual", icon: eventsData[5].icon },
   ];
   
-  const boatSchedule = [
-    { leg: dataDict.boat_schedule.to_yetti, time: "12:00 PM - 1:00 PM", details: dataDict.boat_schedule.departures },
-    { leg: dataDict.boat_schedule.pause, time: "1:00 PM - 2:30 PM", details: dataDict.boat_schedule.suspended },
-    { leg: dataDict.boat_schedule.to_ganzo, time: "2:30 PM - 7:30 PM", details: dataDict.boat_schedule.departures },
-  ];
+  const boatSchedule = dataDict.boat_schedule.map((item: any) => ({
+    leg: item.leg,
+    time: item.time,
+    details: item.details,
+  }));
 
   const days = ["thursday", "friday", "saturday", "sunday"];
   const eventsByDay = days.map(dayKey => ({
