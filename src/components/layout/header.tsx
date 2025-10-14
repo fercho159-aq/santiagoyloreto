@@ -91,7 +91,7 @@ export default function Header({ dictionary }: HeaderProps) {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="text-xl font-semibold text-primary/80 transition-colors hover:text-primary"
+                      className="text-xl font-normal text-primary/80 transition-colors hover:text-primary"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {link.name}
