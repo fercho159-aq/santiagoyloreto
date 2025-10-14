@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Countdown from "../countdown";
 import { ChevronDown } from "lucide-react";
 
@@ -17,8 +16,14 @@ type HeroSectionProps = {
   }
 }
 
+const heroImage = {
+  id: "hero-background",
+  description: "Romantic beach scene at sunset in Los Cabos",
+  imageUrl: "https://picsum.photos/seed/loretosantiago/1920/1080",
+  imageHint: "beach sunset"
+};
+
 export default function HeroSection({ dictionary }: HeroSectionProps) {
-  const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
 
   return (
     <section id="home" className="relative h-dvh min-h-[700px] text-white">

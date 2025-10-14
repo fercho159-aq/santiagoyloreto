@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Locale } from "@/lib/i18n-config";
 
 type AccommodationSectionProps = {
@@ -13,9 +12,15 @@ type AccommodationSectionProps = {
   }
 }
 
-export default function AccommodationSection({ lang, dictionary }: AccommodationSectionProps) {
-  const accommodationImage = PlaceHolderImages.find((img) => img.id === "jw-marriott");
+const accommodationImage = {
+  id: "jw-marriott",
+  description: "Luxury area of JW Marriott hotel",
+  imageUrl: "https://picsum.photos/seed/jwmarriott/600/400",
+  imageHint: "luxury hotel resort"
+};
 
+
+export default function AccommodationSection({ lang, dictionary }: AccommodationSectionProps) {
   return (
     <section id="hospedaje" className="py-20 md:py-32 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">

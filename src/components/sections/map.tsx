@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { MapPin } from "lucide-react"
 
@@ -17,9 +16,14 @@ type MapSectionProps = {
     }[];
 }
 
-export default function MapSection({ dictionary, locations }: MapSectionProps) {
-    const mapImage = PlaceHolderImages.find((img) => img.id === "map-illustration");
+const mapImage = {
+  id: "map-illustration",
+  description: "Hand-drawn cartography style map of the wedding locations",
+  imageUrl: "/images/mapa.jpg",
+  imageHint: "cartography map sketch"
+};
 
+export default function MapSection({ dictionary, locations }: MapSectionProps) {
   return (
     <section id="campus" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">

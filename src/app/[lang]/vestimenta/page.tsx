@@ -1,25 +1,70 @@
 import Image from "next/image";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card } from "@/components/ui/card";
 import { getDictionary } from "@/lib/dictionaries";
 import { Locale } from "@/lib/i18n-config";
+
+type ImagePlaceholder = {
+  id: string;
+  description: string;
+  imageUrl: string;
+  imageHint: string;
+};
+
+const images: ImagePlaceholder[] = [
+    {
+      "id": "dress-code-welcome-1",
+      "description": "Woman in a stylish beach outfit",
+      "imageUrl": "https://picsum.photos/seed/welcomeoutfit1/400/600",
+      "imageHint": "beach fashion"
+    },
+    {
+      "id": "dress-code-welcome-2",
+      "description": "Man in a casual but elegant beach attire",
+      "imageUrl": "https://picsum.photos/seed/welcomeoutfit2/400/600",
+      "imageHint": "mens beachwear"
+    },
+    {
+      "id": "dress-code-welcome-3",
+      "description": "Another stylish outfit for a welcome cocktail on the beach",
+      "imageUrl": "https://picsum.photos/seed/welcomeoutfit3/400/600",
+      "imageHint": "cocktail dress"
+    },
+    {
+      "id": "dress-code-wedding-1",
+      "description": "Elegant formal dress for an outdoor garden wedding",
+      "imageUrl": "https://picsum.photos/seed/weddingoutfit1/400/600",
+      "imageHint": "garden wedding"
+    },
+    {
+      "id": "dress-code-wedding-2",
+      "description": "Man in a sharp suit suitable for a formal reception",
+      "imageUrl": "https://picsum.photos/seed/weddingoutfit2/400/600",
+      "imageHint": "formal suit"
+    },
+    {
+      "id": "dress-code-wedding-3",
+      "description": "A beautiful long dress, perfect for a wedding reception",
+      "imageUrl": "https://picsum.photos/seed/weddingoutfit3/400/600",
+      "imageHint": "elegant gown"
+    }
+];
 
 export default async function DressCodePage({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getDictionary(lang);
   const pageDict = dict.dressCodePage;
 
   const welcomeImages = [
-    PlaceHolderImages.find((img) => img.id === "dress-code-welcome-1"),
-    PlaceHolderImages.find((img) => img.id === "dress-code-welcome-2"),
-    PlaceHolderImages.find((img) => img.id === "dress-code-welcome-3"),
+    images.find((img) => img.id === "dress-code-welcome-1"),
+    images.find((img) => img.id === "dress-code-welcome-2"),
+    images.find((img) => img.id === "dress-code-welcome-3"),
   ];
 
   const weddingImages = [
-    PlaceHolderImages.find((img) => img.id === "dress-code-wedding-1"),
-    PlaceHolderImages.find((img) => img.id === "dress-code-wedding-2"),
-    PlaceHolderImages.find((img) => img.id === "dress-code-wedding-3"),
+    images.find((img) => img.id === "dress-code-wedding-1"),
+    images.find((img) => img.id === "dress-code-wedding-2"),
+    images.find((img) => img.id === "dress-code-wedding-3"),
   ];
 
   return (

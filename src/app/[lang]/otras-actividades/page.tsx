@@ -2,12 +2,99 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Globe } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
 import { Locale } from "@/lib/i18n-config";
+
+type ImagePlaceholder = {
+  id: string;
+  description: string;
+  imageUrl: string;
+  imageHint: string;
+};
+
+const images: ImagePlaceholder[] = [
+    {
+      "id": "activity-horseback",
+      "description": "People riding horses on a beach",
+      "imageUrl": "https://picsum.photos/seed/horseback/600/400",
+      "imageHint": "horseback riding beach"
+    },
+    {
+      "id": "activity-diving",
+      "description": "Scuba diver underwater with coral reef",
+      "imageUrl": "https://picsum.photos/seed/scubadiving/600/400",
+      "imageHint": "scuba diving"
+    },
+    {
+      "id": "activity-ocean-safari",
+      "description": "A boat on the ocean during a safari tour",
+      "imageUrl": "https://picsum.photos/seed/oceansafari/600/400",
+      "imageHint": "ocean safari"
+    },
+    {
+      "id": "activity-golf",
+      "description": "A beautiful golf course by the ocean",
+      "imageUrl": "https://picsum.photos/seed/golfcourse/600/400",
+      "imageHint": "golf course"
+    },
+    {
+      "id": "activity-whale-shark",
+      "description": "A person swimming near a large whale shark",
+      "imageUrl": "https://picsum.photos/seed/whaleshark/600/400",
+      "imageHint": "whale shark"
+    },
+    {
+      "id": "activity-sol-de-mayo",
+      "description": "A waterfall in a canyon",
+      "imageUrl": "https://picsum.photos/seed/soldemayo/600/400",
+      "imageHint": "canyon waterfall"
+    },
+    {
+      "id": "activity-surf",
+      "description": "A person learning to surf",
+      "imageUrl": "https://picsum.photos/seed/surfclass/600/400",
+      "imageHint": "surf lesson"
+    },
+    {
+      "id": "activity-art-walk",
+      "description": "A colorful street during an art walk event",
+      "imageUrl": "https://picsum.photos/seed/artwalk/600/400",
+      "imageHint": "art walk"
+    },
+    {
+      "id": "restaurant-acre",
+      "description": "A stylish restaurant in a lush, natural setting",
+      "imageUrl": "https://picsum.photos/seed/acrerestaurant/600/400",
+      "imageHint": "jungle restaurant"
+    },
+    {
+      "id": "restaurant-flora-farms",
+      "description": "A rustic farm-to-table restaurant",
+      "imageUrl": "https://picsum.photos/seed/florafarms/600/400",
+      "imageHint": "farm restaurant"
+    },
+    {
+      "id": "restaurant-tamarindos",
+      "description": "An elegant restaurant with outdoor seating",
+      "imageUrl": "https://picsum.photos/seed/tamarindos/600/400",
+      "imageHint": "elegant restaurant"
+    },
+    {
+      "id": "restaurant-la-lupita",
+      "description": "A lively taqueria with a vibrant atmosphere",
+      "imageUrl": "https://picsum.photos/seed/lalupita/600/400",
+      "imageHint": "mexican taqueria"
+    },
+    {
+      "id": "restaurant-toro-guero",
+      "description": "A local seafood restaurant",
+      "imageUrl": "https://picsum.photos/seed/toroguero/600/400",
+      "imageHint": "seafood restaurant"
+    }
+];
 
 export default async function OtherActivitiesPage({ params: { lang } }: { params: { lang: Locale } }) {
     const dict = await getDictionary(lang);
@@ -16,7 +103,7 @@ export default async function OtherActivitiesPage({ params: { lang } }: { params
     const activities = dict.data.other_activities_list;
     const restaurants = dict.data.restaurants_list;
 
-    const getImage = (id: string) => PlaceHolderImages.find((img) => img.id === id);
+    const getImage = (id: string) => images.find((img) => img.id === id);
 
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground font-body">

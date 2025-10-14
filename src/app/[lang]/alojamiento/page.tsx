@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -9,6 +8,46 @@ import { Phone, Mail, User } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { getDictionary } from "@/lib/dictionaries";
 import { Locale } from "@/lib/i18n-config";
+
+type ImagePlaceholder = {
+  id: string;
+  description: string;
+  imageUrl: string;
+  imageHint: string;
+};
+
+const images: ImagePlaceholder[] = [
+    {
+      "id": "hotel-el-ganzo",
+      "description": "Exterior view of the stylish Hotel El Ganzo",
+      "imageUrl": "https://picsum.photos/seed/elganzo/600/400",
+      "imageHint": "luxury boutique hotel"
+    },
+    {
+      "id": "hotel-la-marina",
+      "description": "Charming view of Hotel La Marina Inn",
+      "imageUrl": "https://picsum.photos/seed/lamarina/600/400",
+      "imageHint": "cozy inn mexico"
+    },
+    {
+      "id": "jw-marriott",
+      "description": "Luxury area of JW Marriott hotel",
+      "imageUrl": "https://picsum.photos/seed/jwmarriott/600/400",
+      "imageHint": "luxury hotel resort"
+    },
+    {
+      "id": "ritz-carlton",
+      "description": "Classic view of the Ritz Carlton hotel",
+      "imageUrl": "https://picsum.photos/seed/ritzcarlton/600/400",
+      "imageHint": "classic hotel exterior"
+    },
+    {
+      "id": "secrets-resort",
+      "description": "View of the Secrets resort",
+      "imageUrl": "https://picsum.photos/seed/secretsresort/600/400",
+      "imageHint": "beachfront resort"
+    }
+];
 
 export default async function AccommodationPage({ params: { lang } }: { params: { lang: Locale } }) {
     const dict = await getDictionary(lang);
@@ -31,7 +70,7 @@ export default async function AccommodationPage({ params: { lang } }: { params: 
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
               {hotels.map((hotel: any) => {
-                const image = PlaceHolderImages.find((img) => img.id === hotel.imageId);
+                const image = images.find((img) => img.id === hotel.imageId);
                 return (
                     <Card key={hotel.name} className="bg-background shadow-lg overflow-hidden flex flex-col">
                     {image && (
