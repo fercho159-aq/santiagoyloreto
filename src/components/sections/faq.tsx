@@ -4,16 +4,26 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faqs } from "@/lib/data.tsx";
 
-export default function FaqSection() {
+type FaqSectionProps = {
+  dictionary: {
+    title: string;
+    subtitle: string;
+  },
+  faqs: {
+    question: string;
+    answer: React.ReactNode;
+  }[]
+}
+
+export default function FaqSection({ dictionary, faqs }: FaqSectionProps) {
   return (
     <section id="dudas" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl text-primary">Preguntas Frecuentes</h2>
+          <h2 className="font-headline text-4xl md:text-5xl text-primary">{dictionary.title}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hemos respondido algunas preguntas que podrías tener.
+            {dictionary.subtitle}
           </p>
         </div>
         

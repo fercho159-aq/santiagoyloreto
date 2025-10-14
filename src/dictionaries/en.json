@@ -1,0 +1,176 @@
+{
+    "nav": {
+        "agenda": "Agenda",
+        "campus": "Campus",
+        "hospedaje": "Accommodation",
+        "viaje": "Travel",
+        "vestimenta": "Dress Code",
+        "otras-actividades": "Other Activities",
+        "cdmx": "CDMX",
+        "dudas": "FAQs",
+        "rsvp": "RSVP"
+    },
+    "hero": {
+        "title": "Loreto & Santiago",
+        "date": "11.08.2025 | San José del Cabo",
+        "welcome": "We can't wait to celebrate our love with you for an unforgettable weekend in Los Cabos! We've created this guide with all the information so your only worry is to enjoy.",
+        "countdown": {
+            "days": "Days",
+            "hours": "Hours",
+            "minutes": "Minutes",
+            "seconds": "Seconds"
+        }
+    },
+    "map": {
+        "title": "Our Campus",
+        "subtitle": "Explore the locations of our weekend. Hover over the points for more details."
+    },
+    "accommodation": {
+        "title": "Accommodation",
+        "subtitle": "We have selected a variety of hotels with special rates for you. Explore the options and find the perfect place for your stay during our wedding weekend.",
+        "button": "View Hotels and Rates"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "We've answered some questions you might have."
+    },
+    "rsvp": {
+        "title": "Confirm Your Attendance",
+        "subtitle": "Please let us know if you can join us by September 15, 2025.",
+        "firstName": "First Name",
+        "firstNamePlaceholder": "Your first name",
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Your last name",
+        "attending": "Will you attend?",
+        "yes": "Yes, I'll gladly attend",
+        "no": "I won't be able to make it",
+        "submit": "Confirm Attendance",
+        "submitting": "Submitting...",
+        "successTitle": "Confirmation Received!",
+        "errorTitle": "Form Error",
+        "successMessageAttending": "Thank you for confirming, {firstName}! We can't wait to celebrate with you.",
+        "successMessageNotAttending": "We're sorry you can't make it, {firstName}. You will be missed.",
+        "validationError": "Please correct the errors and try again."
+    },
+    "actions": {
+        "firstNameRequired": "First name is required.",
+        "lastNameRequired": "Last name is required.",
+        "attendingRequired": "Please select an option."
+    },
+    "footer": {
+        "location": "San José del Cabo | 11.08.2025"
+    },
+    "accommodationPage": {
+        "title": "Accommodation",
+        "subtitle": "To ensure you have easy access to all the festivities, below is a curated selection of accommodations in Puerto Los Cabos. You can find the reservation page by clicking on the hotel of your choice or by contacting the hotel directly. Please be sure to apply our wedding code when making your reservation to enjoy the exclusive rate.",
+        "bookingCode": "Booking Code",
+        "contact": "Please contact to reserve:",
+        "bookHere": "BOOK HERE",
+        "contactDirectly": "Or contact the hotel directly.",
+        "transportationNote": "*Transportation will be provided to and from Hotel El Ganzo for both days' events."
+    },
+    "agendaPage": {
+        "title": "Weekend Agenda",
+        "subtitle": "Here is the schedule of all the events we have planned to celebrate together.",
+        "logisticsTitle": "Important Friday Logistics",
+        "boatScheduleTitle": "Boat transfers between Hotel El Ganzo and Yetti:",
+        "schedule": {
+            "time": "Time",
+            "location": "Location",
+            "dressCode": "Dress Code"
+        }
+    },
+    "cdmxPage": {
+        "title": "CDMX",
+        "subtitle": "For those with a layover in Mexico City",
+        "condeNastButton": "CONDE NAST CDMX TRAVEL GUIDE",
+        "inspirationButton": "INSPIRATION TRAVEL GUIDE",
+        "accommodation": "Accommodation",
+        "whatToDo": "What to Do?",
+        "restaurants": "Restaurants",
+        "shopping": "Shopping"
+    },
+    "dressCodePage": {
+        "title": "Dress Code",
+        "subtitle": "This is just a moodboard, don't stress, feel free to express yourself.",
+        "welcomeTitle": "11.07.25 - Welcome Gathering",
+        "welcomeSubtitle": "The event will be on the beach, so we recommend wearing comfortable shoes suitable for sand.",
+        "weddingTitle": "11.08.2025 - Ceremony & Reception",
+        "weddingSubtitle": "The wedding will be outdoors in a garden, so we recommend wearing comfortable shoes suitable for grass."
+    },
+    "otherActivitiesPage": {
+        "title": "Other Activities",
+        "subtitle": "We have curated this list with some of our favorite experiences in Baja for you to enjoy. By clicking on the activity of your choice, you will find the website and contact information to make your reservation.",
+        "restaurantsTitle": "Restaurants",
+        "visitWebsite": "Visit Website",
+        "bookingCode": "Booking Code",
+        "contact": "Please contact to reserve:"
+    },
+    "travelPage": {
+        "title": "Travel",
+        "subtitle": "Information to help you plan your trip to Los Cabos.",
+        "airportTitle": "Airport & Flights",
+        "airportBody1": "The main point of arrival is the Los Cabos International Airport (SJD).",
+        "airportBody2": "For international travelers, we recommend a layover in Mexico City before heading to Los Cabos. There are daily direct flights from major cities in Mexico and the United States.",
+        "exampleRoutes": "Example routes:",
+        "groundTransportTitle": "Ground Transportation",
+        "groundTransportBody1": "If you choose to rent a car, you will find most rental companies available at SJD airport. We recommend booking in advance.",
+        "groundTransportBody2": "If you prefer a private driver, we recommend arranging it directly through your hotel for convenience and safety.",
+        "weatherTitle": "Weather & Attire",
+        "weatherBody1": "Los Cabos in November is warm, with daytime highs around 28°C (82°F) and cooler nights around 16°C (61°F).",
+        "weatherBody2": "Light, breathable fabrics are ideal. A shawl or light jacket is recommended for cool evenings, especially near the ocean."
+    },
+    "data": {
+        "events": {
+            "welcome_cocktail": "Welcome Cocktail",
+            "ceremony": "Ceremony",
+            "reception": "Reception",
+            "pool_party": "Pool Party",
+            "dinner_party": "Dinner & Party",
+            "farewell_brunch": "Farewell Brunch"
+        },
+        "dress_codes": {
+            "beach_casual": "Beach Casual",
+            "beach_formal": "Beach Formal",
+            "swimsuit": "Swimsuit",
+            "formal": "Formal",
+            "casual": "Casual"
+        },
+        "boat_schedule": {
+            "to_yetti": "TRIP (El Ganzo -> Yetti)",
+            "pause": "PAUSE (During Mass)",
+            "to_ganzo": "RETURN (Yetti -> El Ganzo)"
+        },
+        "locations": {
+            "el_ganzo_events": "Welcome Cocktail, Pool Party",
+            "yetti_events": "Ceremony, Reception",
+            "sculpture_garden_events": "Farewell Brunch",
+            "crania_events": "Dinner & Party"
+        },
+        "faqs": {
+            "q1": "What do 'Beach Casual' and 'Formal' mean?",
+            "a1_casual_title": "Beach Casual:",
+            "a1_casual_body": "Think linen clothes, summer dresses, guayaberas, elegant sandals. Comfortable but stylish. No plastic flip-flops, please!",
+            "a1_beach_formal_title": "Beach Formal:",
+            "a1_beach_formal_body": "For men, a linen or light-colored suit, long-sleeved guayabera. For women, a long or cocktail dress in flowing fabrics and vibrant colors. Stiletto heels are not recommended on the sand.",
+            "a1_formal_title": "Formal:",
+            "a1_formal_body": "Dark suit for men, evening or elegant cocktail dress for women. It's time to shine!",
+            "q2": "How do I get from the airport to the hotels?",
+            "a2": "We recommend booking a shuttle or private taxi from Los Cabos International Airport (SJD). The journey to the La Playita / San José del Cabo area is about 20-30 minutes. There are several reliable services like Cabo Airport Shuttle or Transcabo.",
+            "q3": "Besides the events, what else do you recommend doing?",
+            "a3": "You are in paradise! We recommend exploring the historic center of San José del Cabo, especially the 'Art Walk' on Thursday night. You can also enjoy the beaches (Playa Palmilla is beautiful), take a surf class, or a boat tour to the Arch of Cabo San Lucas.",
+            "q4": "Do I need to RSVP for each event separately?",
+            "a4": "It's not necessary. By completing the RSVP form on this website, we will understand that you will attend all scheduled events for the weekend. If for any reason you cannot attend a particular event, please let us know personally."
+        },
+        "other_activities": {
+            "horse_riding": "Horseback Riding",
+            "diving": "Diving",
+            "ocean_safari": "Ocean Safari",
+            "golf": "Golf",
+            "whale_shark": "Whale Shark",
+            "sol_de_mayo": "Sol de Mayo",
+            "surf_lessons": "Surf Lessons",
+            "art_walk": "Art Walk"
+        }
+    }
+}

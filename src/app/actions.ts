@@ -2,23 +2,21 @@
 
 import { z } from 'zod'
 import { revalidatePath } from 'next/cache'
+import { getDictionary } from '@/lib/dictionaries'
+import { Locale } from '@/lib/i18n-config'
 
-const schema = z.object({
-  firstName: z.string({ invalid_type_error: "Nombre inválido." }).min(1, 'El nombre es requerido.'),
-  lastName: z.string({ invalid_type_error: "Apellido inválido." }).min(1, 'El apellido es requerido.'),
-  attending: z.enum(['yes', 'no'], { errorMap: () => ({ message: 'Por favor selecciona una opción.' }) }),
-})
+export async function submitRsvp(prevState: any, formData: FormData) {
+  const lang = formData.get('lang') as Locale || 'es';
+  const dict = await getDictionary(lang);
+  const rsvpDict = dict.rsvp;
+  const actionDict = dict.actions;
 
-type State = {
-    errors?: {
-        firstName?: string[];
-        lastName?: string[];
-        attending?: string[];
-    };
-    message?: string;
-}
+  const schema = z.object({
+    firstName: z.string({ invalid_type_error: "Invalid first name." }).min(1, actionDict.firstNameRequired),
+    lastName: z.string({ invalid_type_error: "Invalid last name." }).min(1, actionDict.lastNameRequired),
+    attending: z.enum(['yes', 'no'], { errorMap: () => ({ message: actionDict.attendingRequired }) }),
+  })
 
-export async function submitRsvp(prevState: State, formData: FormData) {
   const validatedFields = schema.safeParse({
     firstName: formData.get('firstName'),
     lastName: formData.get('lastName'),
@@ -28,19 +26,17 @@ export async function submitRsvp(prevState: State, formData: FormData) {
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
-      message: 'Por favor, corrige los errores e intenta de nuevo.',
+      message: rsvpDict.validationError,
     }
   }
 
-  // In a real application, you would save this data to a database.
-  // For example: await db.rsvps.create({ data: validatedFields.data });
   console.log('RSVP Received:', validatedFields.data)
 
-  revalidatePath('/');
+  revalidatePath(`/${lang}/`);
   
   const successMessage = validatedFields.data.attending === 'yes'
-    ? `¡Gracias por confirmar, ${validatedFields.data.firstName}! No podemos esperar a celebrar contigo.`
-    : `Lamentamos que no puedas acompañarnos, ${validatedFields.data.firstName}. Te extrañaremos.`;
+    ? rsvpDict.successMessageAttending.replace('{firstName}', validatedFields.data.firstName)
+    : rsvpDict.successMessageNotAttending.replace('{firstName}', validatedFields.data.firstName);
 
   return { message: successMessage, errors: {} }
 }

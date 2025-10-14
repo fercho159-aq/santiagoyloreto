@@ -2,7 +2,16 @@
 
 import { useState, useEffect } from 'react';
 
-const Countdown = () => {
+type CountdownProps = {
+  dictionary: {
+    days: string;
+    hours: string;
+    minutes: string;
+    seconds: string;
+  }
+}
+
+const Countdown = ({ dictionary }: CountdownProps) => {
   const weddingDate = new Date('2025-11-08T00:00:00').getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -35,14 +44,25 @@ const Countdown = () => {
   }, [weddingDate]);
   
   if (!isClient) {
-    return null;
+    return (
+        <div className="mt-12 w-full max-w-md">
+            <div className="grid grid-cols-4 gap-2 md:gap-4 text-center">
+                {[...Array(4)].map((_, index) => (
+                    <div key={index} className="p-4 bg-white/10 backdrop-blur-sm rounded-lg">
+                        <div className="font-headline text-3xl md:text-5xl">--</div>
+                        <div className="text-sm uppercase tracking-widest">--</div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
   }
 
   const timeUnits = [
-    { label: 'Días', value: timeLeft.days },
-    { label: 'Horas', value: timeLeft.hours },
-    { label: 'Minutos', value: timeLeft.minutes },
-    { label: 'Segundos', value: timeLeft.seconds },
+    { label: dictionary.days, value: timeLeft.days },
+    { label: dictionary.hours, value: timeLeft.hours },
+    { label: dictionary.minutes, value: timeLeft.minutes },
+    { label: dictionary.seconds, value: timeLeft.seconds },
   ];
 
   return (

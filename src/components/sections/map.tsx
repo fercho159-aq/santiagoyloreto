@@ -1,21 +1,32 @@
-"use client"
-
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { locations } from "@/lib/data"
 import { MapPin } from "lucide-react"
 
-export default function MapSection() {
+type MapSectionProps = {
+    dictionary: {
+        title: string;
+        subtitle: string;
+    },
+    locations: {
+        id: string;
+        name: string;
+        address: string;
+        events: string[];
+        position: { top: string; left: string; };
+    }[];
+}
+
+export default function MapSection({ dictionary, locations }: MapSectionProps) {
     const mapImage = PlaceHolderImages.find((img) => img.id === "map-illustration");
 
   return (
     <section id="campus" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl md:text-5xl text-primary">Nuestro Campus</h2>
+          <h2 className="font-headline text-4xl md:text-5xl text-primary">{dictionary.title}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explora los lugares de nuestro fin de semana. Pasa el cursor sobre los puntos para más detalles.
+            {dictionary.subtitle}
           </p>
         </div>
         

@@ -2,8 +2,18 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Locale } from "@/lib/i18n-config";
 
-export default function AccommodationSection() {
+type AccommodationSectionProps = {
+  lang: Locale;
+  dictionary: {
+    title: string;
+    subtitle: string;
+    button: string;
+  }
+}
+
+export default function AccommodationSection({ lang, dictionary }: AccommodationSectionProps) {
   const accommodationImage = PlaceHolderImages.find((img) => img.id === "jw-marriott");
 
   return (
@@ -22,13 +32,13 @@ export default function AccommodationSection() {
                  )}
             </div>
             <div className="text-center md:text-left">
-                <h2 className="font-headline text-4xl md:text-5xl text-primary">Alojamiento</h2>
+                <h2 className="font-headline text-4xl md:text-5xl text-primary">{dictionary.title}</h2>
                 <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
-                    Hemos seleccionado una variedad de hoteles con tarifas especiales para ustedes. Exploren las opciones y encuentren el lugar perfecto para su estancia durante nuestro fin de semana de bodas.
+                    {dictionary.subtitle}
                 </p>
                 <Button asChild size="lg" className="mt-8 text-lg">
-                    <Link href="/alojamiento">
-                        Ver Hoteles y Tarifas
+                    <Link href={`/${lang}/alojamiento`}>
+                        {dictionary.button}
                     </Link>
                 </Button>
             </div>

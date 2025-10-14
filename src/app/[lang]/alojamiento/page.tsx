@@ -7,8 +7,13 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Phone, Mail, User } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { getDictionary } from "@/lib/dictionaries";
+import { Locale } from "@/lib/i18n-config";
 
-export default function AccommodationPage() {
+export default async function AccommodationPage({ params: { lang } }: { params: { lang: Locale } }) {
+    const dict = await getDictionary(lang);
+    const accommodationDict = dict.accommodationPage;
+
     const elGanzoImage = PlaceHolderImages.find((img) => img.id === "hotel-el-ganzo");
     const laMarinaImage = PlaceHolderImages.find((img) => img.id === "hotel-la-marina");
     const jwMarriottImage = PlaceHolderImages.find((img) => img.id === "jw-marriott");
@@ -27,7 +32,7 @@ export default function AccommodationPage() {
         {
             name: "Marina Inn",
             image: laMarinaImage,
-            bookingCode: "Boda Loreto & Santiago",
+            bookingCode: lang === 'es' ? "Boda Loreto & Santiago" : "Loreto & Santiago Wedding",
             phone: "+1 310 272 9244 / +52 524 142 4166",
             email: "manager@lamarinainn.com",
             bookingLink: null
@@ -35,7 +40,7 @@ export default function AccommodationPage() {
         {
             name: "JW Marriott - Casa Maat",
             image: jwMarriottImage,
-            bookingCode: "Boda Loreto & Santiago",
+            bookingCode: lang === 'es' ? "Boda Loreto & Santiago" : "Loreto & Santiago Wedding",
             contactPerson: "Carlos Davis",
             phone: "+52 624 163 7625",
             email: "jwlc.greservaciones@grupodiestra.com",
@@ -61,14 +66,14 @@ export default function AccommodationPage() {
 
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground font-body">
-      <Header />
+      <Header dictionary={dict.nav} />
       <main className="flex-1">
         <div className="bg-secondary py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
-              <h1 className="font-headline text-4xl md:text-5xl text-primary">Alojamiento</h1>
+              <h1 className="font-headline text-4xl md:text-5xl text-primary">{accommodationDict.title}</h1>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                Para garantizar que tengas fácil acceso a todas las festividades, a continuación encontrarás una selección curada de alojamientos en Puerto Los Cabos. Puede encontrar la página de reservaciones haciendo clic en el hotel de su elección o contactando directamente al hotel. Por favor, asegúrese de aplicar el código de nuestra boda al realizar su reservación para poder disfrutar de la tarifa exclusiva.
+                {accommodationDict.subtitle}
               </p>
             </div>
 
@@ -91,11 +96,11 @@ export default function AccommodationPage() {
                   </CardHeader>
                   <CardContent className="flex-grow space-y-4">
                     <div className="bg-primary/5 p-4 rounded-md border border-primary/20">
-                      <p className="text-center text-primary font-semibold">Código de Reserva:</p>
+                      <p className="text-center text-primary font-semibold">{accommodationDict.bookingCode}:</p>
                       <p className="text-center text-2xl font-bold text-primary mt-1">{hotel.bookingCode}</p>
                     </div>
                      <div className="space-y-2 text-muted-foreground">
-                        <p className="font-semibold text-foreground">Por favor contactar para reservar:</p>
+                        <p className="font-semibold text-foreground">{accommodationDict.contact}:</p>
                         {hotel.contactPerson && (
                              <div className="flex items-center gap-2">
                                 <User className="w-4 h-4"/> <span>{hotel.contactPerson}</span>
@@ -117,10 +122,10 @@ export default function AccommodationPage() {
                      <CardFooter className="flex-col items-stretch gap-2">
                         <Button asChild size="lg" className="w-full text-lg">
                             <Link href={hotel.bookingLink} target="_blank">
-                                RESERVA AQUÍ
+                                {accommodationDict.bookHere}
                             </Link>
                         </Button>
-                        <p className="text-xs text-muted-foreground text-center">O contacta directamente al hotel.</p>
+                        <p className="text-xs text-muted-foreground text-center">{accommodationDict.contactDirectly}</p>
                      </CardFooter>
                   )}
                 </Card>
@@ -129,14 +134,14 @@ export default function AccommodationPage() {
 
             <Alert className="mt-12 max-w-4xl mx-auto border-primary/50 bg-background shadow-lg">
                 <AlertDescription className="text-center text-muted-foreground">
-                    *Se ofrecerá transporte desde y hacia el Hotel El Ganzo para los eventos de ambos días.
+                    {accommodationDict.transportationNote}
                 </AlertDescription>
             </Alert>
 
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer dictionary={dict.footer} />
     </div>
   );
 }

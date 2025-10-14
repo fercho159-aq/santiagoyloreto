@@ -9,22 +9,42 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Locale } from "@/lib/i18n-config"
 
 const initialState = {
   message: "",
   errors: {},
 }
 
-function SubmitButton() {
+function SubmitButton({ dictionary }: { dictionary: { submit: string; submitting: string } }) {
   const { pending } = useFormStatus()
   return (
     <Button type="submit" className="w-full text-lg" size="lg" disabled={pending}>
-      {pending ? "Enviando..." : "Confirmar Asistencia"}
+      {pending ? dictionary.submitting : dictionary.submit}
     </Button>
   )
 }
 
-export default function RsvpSection() {
+type RsvpSectionProps = {
+  lang: Locale;
+  dictionary: {
+    title: string;
+    subtitle: string;
+    firstName: string;
+    firstNamePlaceholder: string;
+    lastName: string;
+    lastNamePlaceholder: string;
+    attending: string;
+    yes: string;
+    no: string;
+    submit: string;
+    submitting: string;
+    successTitle: string;
+    errorTitle: string;
+  }
+}
+
+export default function RsvpSection({ lang, dictionary }: RsvpSectionProps) {
   const [state, formAction] = useActionState(submitRsvp, initialState)
   const { toast } = useToast()
   const formRef = useRef<HTMLFormElement>(null);
@@ -32,58 +52,59 @@ export default function RsvpSection() {
   useEffect(() => {
     if (state.message && state.errors && Object.keys(state.errors).length === 0) {
       toast({
-        title: "¡Confirmación Recibida!",
+        title: dictionary.successTitle,
         description: state.message,
       })
       formRef.current?.reset();
     } else if (state.message && state.errors && Object.keys(state.errors).length > 0) {
       toast({
-        title: "Error en el formulario",
+        title: dictionary.errorTitle,
         description: state.message,
         variant: "destructive",
       })
     }
-  }, [state, toast])
+  }, [state, toast, dictionary.successTitle, dictionary.errorTitle])
 
   return (
     <section id="rsvp" className="py-20 md:py-32 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <Card className="max-w-2xl mx-auto bg-background shadow-2xl">
           <CardHeader className="text-center">
-            <CardTitle className="font-headline text-4xl md:text-5xl text-primary">Confirma tu Asistencia</CardTitle>
+            <CardTitle className="font-headline text-4xl md:text-5xl text-primary">{dictionary.title}</CardTitle>
             <CardDescription className="text-lg">
-              Por favor, haznos saber si puedes acompañarnos antes del 15 de Septiembre, 2025.
+              {dictionary.subtitle}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form ref={formRef} action={formAction} className="space-y-6">
+              <input type="hidden" name="lang" value={lang} />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-lg">Nombre</Label>
-                  <Input id="firstName" name="firstName" placeholder="Tu nombre" required />
+                  <Label htmlFor="firstName" className="text-lg">{dictionary.firstName}</Label>
+                  <Input id="firstName" name="firstName" placeholder={dictionary.firstNamePlaceholder} required />
                   {state.errors?.firstName && <p className="text-sm text-destructive">{state.errors.firstName.join(", ")}</p>}
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-lg">Apellido</Label>
-                  <Input id="lastName" name="lastName" placeholder="Tu apellido" required />
+                  <Label htmlFor="lastName" className="text-lg">{dictionary.lastName}</Label>
+                  <Input id="lastName" name="lastName" placeholder={dictionary.lastNamePlaceholder} required />
                    {state.errors?.lastName && <p className="text-sm text-destructive">{state.errors.lastName.join(", ")}</p>}
                 </div>
               </div>
               <div className="space-y-3">
-                 <Label className="text-lg">¿Asistirás?</Label>
+                 <Label className="text-lg">{dictionary.attending}</Label>
                 <RadioGroup name="attending" defaultValue="yes" className="flex items-center gap-6">
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="yes" id="yes" />
-                    <Label htmlFor="yes" className="text-base">Sí, con gusto asistiré</Label>
+                    <Label htmlFor="yes" className="text-base">{dictionary.yes}</Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="no" id="no" />
-                    <Label htmlFor="no" className="text-base">No podré acompañarlos</Label>
+                    <Label htmlFor="no" className="text-base">{dictionary.no}</Label>
                   </div>
                 </RadioGroup>
                 {state.errors?.attending && <p className="text-sm text-destructive">{state.errors.attending.join(", ")}</p>}
               </div>
-              <SubmitButton />
+              <SubmitButton dictionary={{submit: dictionary.submit, submitting: dictionary.submitting }}/>
             </form>
           </CardContent>
         </Card>

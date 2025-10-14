@@ -2,29 +2,46 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { WeddingRingIcon } from "../icons";
 import { usePathname } from 'next/navigation';
+import LocaleSwitcher from "./lang-switcher";
 
-const navLinks = [
-  { name: "Agenda", href: "/agenda" },
-  { name: "Campus", href: "/#campus" },
-  { name: "Hospedaje", href: "/alojamiento" },
-  { name: "Viaje", href: "/viaje" },
-  { name: "Vestimenta", href: "/vestimenta" },
-  { name: "Otras Actividades", href: "/otras-actividades" },
-  { name: "CDMX", href: "/cdmx" },
-  { name: "Dudas", href: "/#dudas" },
-  { name: "RSVP", href: "/#rsvp" },
-];
+type HeaderProps = {
+  dictionary: {
+    agenda: string;
+    campus: string;
+    hospedaje: string;
+    viaje: string;
+    vestimenta: string;
+    'otras-actividades': string;
+    cdmx: string;
+    dudas: string;
+    rsvp: string;
+  }
+}
 
-export default function Header() {
+export default function Header({ dictionary }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  const lang = pathname.split('/')[1];
+
+  const navLinks = [
+    { name: dictionary.agenda, href: `/${lang}/agenda` },
+    { name: dictionary.campus, href: `/${lang}/#campus` },
+    { name: dictionary.hospedaje, href: `/${lang}/alojamiento` },
+    { name: dictionary.viaje, href: `/${lang}/viaje` },
+    { name: dictionary.vestimenta, href: `/${lang}/vestimenta` },
+    { name: dictionary["otras-actividades"], href: `/${lang}/otras-actividades` },
+    { name: dictionary.cdmx, href: `/${lang}/cdmx` },
+    { name: dictionary.dudas, href: `/${lang}/#dudas` },
+    { name: dictionary.rsvp, href: `/${lang}/#rsvp` },
+  ];
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -33,13 +50,6 @@ export default function Header() {
     
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const getLinkHref = (href: string) => {
-    if (pathname !== '/' && href.startsWith('/#')) {
-      return `/${href}`;
-    }
-    return href;
-  }
 
   return (
     <header
@@ -50,24 +60,26 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href={`/${lang}`} className="flex items-center gap-2">
           <WeddingRingIcon className="h-6 w-6 text-primary" />
           <span className="font-headline text-xl font-semibold text-primary">
             L & S
           </span>
         </Link>
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-x-3 lg:gap-x-6 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={getLinkHref(link.href)}
-              className="font-semibold text-primary/80 transition-colors hover:text-primary"
+              href={link.href}
+              className="font-semibold text-sm text-primary/80 transition-colors hover:text-primary"
             >
               {link.name}
             </Link>
           ))}
+          <LocaleSwitcher />
         </nav>
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <LocaleSwitcher />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -77,7 +89,7 @@ export default function Header() {
             <SheetContent side="right" className="w-[300px] bg-background">
               <div className="flex h-full flex-col p-6">
                 <div className="flex items-center justify-between">
-                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                   <Link href={`/${lang}`} className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <WeddingRingIcon className="h-6 w-6 text-primary" />
                     <span className="font-headline text-xl font-semibold text-primary">
                       Loreto & Santiago
@@ -88,7 +100,7 @@ export default function Header() {
                   {navLinks.map((link) => (
                     <Link
                       key={link.name}
-                      href={getLinkHref(link.href)}
+                      href={link.href}
                       className="text-xl font-semibold text-primary/80 transition-colors hover:text-primary"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
