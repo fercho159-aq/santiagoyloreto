@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Romantic beach scene at sunset in Los Cabos",
+      "imageUrl": "https://picsum.photos/seed/loretosantiago/1920/1080",
+      "imageHint": "beach sunset"
+    },
+    {
+      "id": "map-illustration",
+      "description": "Hand-drawn cartography style map of the wedding locations",
+      "imageUrl": "https://picsum.photos/seed/weddingmap/1200/900",
+      "imageHint": "cartography map sketch"
+    },
+    {
+      "id": "hotel-el-ganzo",
+      "description": "Exterior view of the stylish Hotel El Ganzo",
+      "imageUrl": "https://picsum.photos/seed/elganzo/600/400",
+      "imageHint": "luxury boutique hotel"
+    },
+    {
+      "id": "hotel-la-marina",
+      "description": "Charming view of Hotel La Marina Inn",
+      "imageUrl": "https://picsum.photos/seed/lamarina/600/400",
+      "imageHint": "cozy inn mexico"
+    }
+  ]
 }

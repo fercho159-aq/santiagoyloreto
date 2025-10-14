@@ -1,0 +1,64 @@
+"use client"
+
+import Image from "next/image"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { locations } from "@/lib/data"
+import { MapPin } from "lucide-react"
+
+export default function MapSection() {
+    const mapImage = PlaceHolderImages.find((img) => img.id === "map-illustration");
+
+  return (
+    <section id="campus" className="py-20 md:py-32 bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12">
+          <h2 className="font-headline text-4xl md:text-5xl text-primary">Nuestro Campus</h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Explora los lugares de nuestro fin de semana. Pasa el cursor sobre los puntos para más detalles.
+          </p>
+        </div>
+        
+        <div className="relative max-w-5xl mx-auto aspect-[4/3] rounded-lg overflow-hidden shadow-2xl border-4 border-secondary">
+          {mapImage && (
+            <Image
+              src={mapImage.imageUrl}
+              alt={mapImage.description}
+              fill
+              className="object-cover"
+              data-ai-hint={mapImage.imageHint}
+            />
+          )}
+
+          {locations.map((location) => (
+             <Popover key={location.id}>
+                <PopoverTrigger asChild>
+                    <div 
+                        className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                        style={{ top: location.position.top, left: location.position.left }}
+                        aria-label={`Ver detalles de ${location.name}`}
+                    >
+                        <MapPin className="w-8 h-8 text-primary drop-shadow-lg transition-transform hover:scale-125" fill="hsl(var(--primary-foreground))" />
+                    </div>
+                </PopoverTrigger>
+                <PopoverContent className="w-64 border-primary/50 bg-background">
+                    <div className="space-y-2">
+                        <h3 className="font-headline text-lg font-bold text-primary">{location.name}</h3>
+                        <p className="text-sm text-muted-foreground">{location.address}</p>
+                        {location.events.length > 0 && (
+                            <div>
+                                <h4 className="text-sm font-semibold text-foreground">Eventos aquí:</h4>
+                                <ul className="list-disc pl-5 text-sm text-muted-foreground">
+                                    {location.events.map(event => <li key={event}>{event}</li>)}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                </PopoverContent>
+             </Popover>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,3 +1,25 @@
+import Header from '@/components/layout/header'
+import Footer from '@/components/layout/footer'
+import HeroSection from '@/components/sections/hero'
+import ItinerarySection from '@/components/sections/itinerary'
+import MapSection from '@/components/sections/map'
+import AccommodationSection from '@/components/sections/accommodation'
+import FaqSection from '@/components/sections/faq'
+import RsvpSection from '@/components/sections/rsvp'
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="flex flex-col min-h-dvh bg-background text-foreground font-body">
+      <Header />
+      <main className="flex-1">
+        <HeroSection />
+        <ItinerarySection />
+        <MapSection />
+        <AccommodationSection />
+        <FaqSection />
+        <RsvpSection />
+      </main>
+      <Footer />
+    </div>
+  )
 }
