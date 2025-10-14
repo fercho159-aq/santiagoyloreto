@@ -13,6 +13,7 @@ import { Locale } from "@/lib/i18n-config";
 export default async function AccommodationPage({ params: { lang } }: { params: { lang: Locale } }) {
     const dict = await getDictionary(lang);
     const accommodationDict = dict.accommodationPage;
+    const dataDict = dict.data;
 
     const elGanzoImage = PlaceHolderImages.find((img) => img.id === "hotel-el-ganzo");
     const laMarinaImage = PlaceHolderImages.find((img) => img.id === "hotel-la-marina");
@@ -32,7 +33,7 @@ export default async function AccommodationPage({ params: { lang } }: { params: 
         {
             name: "Marina Inn",
             image: laMarinaImage,
-            bookingCode: lang === 'es' ? "Boda Loreto & Santiago" : "Loreto & Santiago Wedding",
+            bookingCode: dataDict.wedding_name_code,
             phone: "+1 310 272 9244 / +52 524 142 4166",
             email: "manager@lamarinainn.com",
             bookingLink: null
@@ -40,7 +41,7 @@ export default async function AccommodationPage({ params: { lang } }: { params: 
         {
             name: "JW Marriott - Casa Maat",
             image: jwMarriottImage,
-            bookingCode: lang === 'es' ? "Boda Loreto & Santiago" : "Loreto & Santiago Wedding",
+            bookingCode: dataDict.wedding_name_code,
             contactPerson: "Carlos Davis",
             phone: "+52 624 163 7625",
             email: "jwlc.greservaciones@grupodiestra.com",

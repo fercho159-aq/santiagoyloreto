@@ -11,6 +11,7 @@ import { Locale } from "@/lib/i18n-config";
 export default async function CdmxPage({ params: { lang } }: { params: { lang: Locale } }) {
     const dict = await getDictionary(lang);
     const cdmxDict = dict.cdmxPage;
+    const dataDict = dict.data;
     
     const sections = {
         alojamiento: [
@@ -19,16 +20,16 @@ export default async function CdmxPage({ params: { lang } }: { params: { lang: L
             { id: "cdmx-octavia-casa", name: "Octavia Casa", link: "https://octaviacasa.com/" },
         ],
         queHacer: [
-            { id: "cdmx-chapultepec", name: lang === 'es' ? "Castillo de Chapultepec" : "Chapultepec Castle", link: "https://mnh.inah.gob.mx/" },
-            { id: "cdmx-frida-kahlo", name: lang === 'es' ? "Museo Frida Kahlo" : "Frida Kahlo Museum", link: "https://www.museofridakahlo.org.mx/" },
-            { id: "cdmx-desfile", name: lang === 'es' ? "Desfile Día de los Muertos" : "Day of the Dead Parade", link: "#" },
+            { id: "cdmx-chapultepec", name: dataDict.cdmx_activities.chapultepec_castle, link: "https://mnh.inah.gob.mx/" },
+            { id: "cdmx-frida-kahlo", name: dataDict.cdmx_activities.frida_kahlo_museum, link: "https://www.museofridakahlo.org.mx/" },
+            { id: "cdmx-desfile", name: dataDict.cdmx_activities.day_of_the_dead_parade, link: "#" },
             { id: "cdmx-casa-gilardi", name: "Casa Gilardi Luis Barragán", link: "https://www.casagilardi.mx/" },
             { id: "cdmx-bellas-artes", name: "Bellas Artes", link: "https://palacio.inba.gob.mx/" },
         ],
         restaurantes: [
             { id: "cdmx-panaderia-rosetta", name: "Panadería Rosetta", link: "https://www.rosetta.com.mx/panaderia/" },
             { id: "cdmx-maizajo", name: "Tacos de Maizajo", link: "https://www.maizajo.com/" },
-            { id: "cdmx-expendio-maiz", name: lang === 'es' ? "Expendio de Maíz" : "Maize Shop", link: "#" },
+            { id: "cdmx-expendio-maiz", name: dataDict.cdmx_activities.maize_shop, link: "#" },
             { id: "cdmx-rosetta", name: "Rosetta", link: "https://www.rosetta.com.mx/" },
             { id: "cdmx-maximo-bistrot", name: "Máximo Bistrot", link: "https://maximobistrot.com.mx/" },
             { id: "cdmx-lardo", name: "Lardo", link: "https://www.lardo.mx/" },
@@ -36,7 +37,7 @@ export default async function CdmxPage({ params: { lang } }: { params: { lang: L
         ],
         compras: [
             { id: "cdmx-onora", name: "Onora Casa", link: "https://onoracasa.com/" },
-            { id: "cdmx-xinu", name: lang === 'es' ? "Perfumería Xinú" : "Xinú Perfumery", link: "https://xinu.mx/" },
+            { id: "cdmx-xinu", name: dataDict.cdmx_activities.xinu_perfumery, link: "https://xinu.mx/" },
         ],
     };
 

@@ -66,19 +66,7 @@ export default function Header({ dictionary }: HeaderProps) {
             L & S
           </span>
         </Link>
-        <nav className="hidden items-center gap-x-3 lg:gap-x-6 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="font-semibold text-sm text-primary/80 transition-colors hover:text-primary"
-            >
-              {link.name}
-            </Link>
-          ))}
-          <LocaleSwitcher />
-        </nav>
-        <div className="md:hidden flex items-center gap-2">
+        <div className="flex items-center gap-2">
           <LocaleSwitcher />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>

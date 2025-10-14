@@ -13,24 +13,25 @@ export default async function AgendaPage({ params: { lang } }: { params: { lang:
   const dataDict = dict.data;
 
   const events = [
-    { day: lang === 'es' ? "Jueves" : "Thursday", titleKey: "welcome_cocktail", time: "7:00 PM - 10:00 PM", location: "Hotel El Ganzo", dressCodeKey: "beach_casual", icon: eventsData[0].icon },
-    { day: lang === 'es' ? "Viernes" : "Friday", titleKey: "ceremony", time: "1:00 PM - 2:30 PM", location: "Yetti", dressCodeKey: "beach_formal", icon: eventsData[1].icon },
-    { day: lang === 'es' ? "Viernes" : "Friday", titleKey: "reception", time: "2:30 PM - 7:30 PM", location: "Yetti", dressCodeKey: "beach_formal", icon: eventsData[2].icon },
-    { day: lang === 'es' ? "Sábado" : "Saturday", titleKey: "pool_party", time: "12:00 PM - 5:00 PM", location: "Hotel El Ganzo", dressCodeKey: "swimsuit", icon: eventsData[3].icon },
-    { day: lang === 'es' ? "Sábado" : "Saturday", titleKey: "dinner_party", time: "8:00 PM - 2:00 AM", location: "Crania", dressCodeKey: "formal", icon: eventsData[4].icon },
-    { day: lang === 'es' ? "Domingo" : "Sunday", titleKey: "farewell_brunch", time: "10:00 AM - 1:00 PM", location: "Jardín de las Esculturas", dressCodeKey: "casual", icon: eventsData[5].icon },
+    { dayKey: "thursday", titleKey: "welcome_cocktail", time: "7:00 PM - 10:00 PM", location: "Hotel El Ganzo", dressCodeKey: "beach_casual", icon: eventsData[0].icon },
+    { dayKey: "friday", titleKey: "ceremony", time: "1:00 PM - 2:30 PM", location: "Yetti", dressCodeKey: "beach_formal", icon: eventsData[1].icon },
+    { dayKey: "friday", titleKey: "reception", time: "2:30 PM - 7:30 PM", location: "Yetti", dressCodeKey: "beach_formal", icon: eventsData[2].icon },
+    { dayKey: "saturday", titleKey: "pool_party", time: "12:00 PM - 5:00 PM", location: "Hotel El Ganzo", dressCodeKey: "swimsuit", icon: eventsData[3].icon },
+    { dayKey: "saturday", titleKey: "dinner_party", time: "8:00 PM - 2:00 AM", location: "Crania", dressCodeKey: "formal", icon: eventsData[4].icon },
+    { dayKey: "sunday", titleKey: "farewell_brunch", time: "10:00 AM - 1:00 PM", location: "Jardín de las Esculturas", dressCodeKey: "casual", icon: eventsData[5].icon },
   ];
   
   const boatSchedule = [
-    { leg: dataDict.boat_schedule.to_yetti, time: "12:00 PM - 1:00 PM", details: lang === 'es' ? "Salidas cada 15 min" : "Departures every 15 min" },
-    { leg: dataDict.boat_schedule.pause, time: "1:00 PM - 2:30 PM", details: lang === 'es' ? "Servicio suspendido" : "Service suspended" },
-    { leg: dataDict.boat_schedule.to_ganzo, time: "2:30 PM - 7:30 PM", details: lang === 'es' ? "Salidas cada 15 min" : "Departures every 15 min" },
+    { leg: dataDict.boat_schedule.to_yetti, time: "12:00 PM - 1:00 PM", details: dataDict.boat_schedule.departures },
+    { leg: dataDict.boat_schedule.pause, time: "1:00 PM - 2:30 PM", details: dataDict.boat_schedule.suspended },
+    { leg: dataDict.boat_schedule.to_ganzo, time: "2:30 PM - 7:30 PM", details: dataDict.boat_schedule.departures },
   ];
 
-  const days = lang === 'es' ? ["Jueves", "Viernes", "Sábado", "Domingo"] : ["Thursday", "Friday", "Saturday", "Sunday"];
-  const eventsByDay = days.map(day => ({
-    day,
-    events: events.filter(event => event.day === day),
+  const days = ["thursday", "friday", "saturday", "sunday"];
+  const eventsByDay = days.map(dayKey => ({
+    dayKey,
+    dayName: dataDict.days[dayKey as keyof typeof dataDict.days],
+    events: events.filter(event => event.dayKey === dayKey),
   }));
 
   return (
@@ -47,10 +48,10 @@ export default async function AgendaPage({ params: { lang } }: { params: { lang:
             </div>
 
             <div className="max-w-4xl mx-auto">
-              {eventsByDay.map(({ day, events }) => (
+              {eventsByDay.map(({ dayKey, dayName, events }) => (
                 events.length > 0 && (
-                  <div key={day} className="mb-12">
-                    <h2 className="font-headline text-3xl text-primary mb-6 text-center">{day}</h2>
+                  <div key={dayKey} className="mb-12">
+                    <h2 className="font-headline text-3xl text-primary mb-6 text-center">{dayName}</h2>
                     <div className="relative pl-8 sm:pl-12 py-6 group">
                        <div className="absolute top-0 left-4 sm:left-6 w-px h-full bg-border -translate-x-1/2"></div>
                        {events.map((event, index) => (
@@ -73,7 +74,7 @@ export default async function AgendaPage({ params: { lang } }: { params: { lang:
                          </div>
                        ))}
                     </div>
-                     {day === (lang === 'es' ? "Viernes" : "Friday") && (
+                     {dayKey === "friday" && (
                         <div className="pl-8 sm:pl-12">
                             <Alert className="max-w-full mx-auto border-primary/50 bg-background shadow-lg">
                             <Ship className="h-5 w-5 text-primary" />

@@ -139,7 +139,9 @@
         "boat_schedule": {
             "to_yetti": "TRIP (El Ganzo -> Yetti)",
             "pause": "PAUSE (During Mass)",
-            "to_ganzo": "RETURN (Yetti -> El Ganzo)"
+            "to_ganzo": "RETURN (Yetti -> El Ganzo)",
+            "departures": "Departures every 15 min",
+            "suspended": "Service suspended"
         },
         "locations": {
             "el_ganzo_events": "Welcome Cocktail, Pool Party",
@@ -171,6 +173,20 @@
             "sol_de_mayo": "Sol de Mayo",
             "surf_lessons": "Surf Lessons",
             "art_walk": "Art Walk"
-        }
+        },
+        "cdmx_activities": {
+            "chapultepec_castle": "Chapultepec Castle",
+            "frida_kahlo_museum": "Frida Kahlo Museum",
+            "day_of_the_dead_parade": "Day of the Dead Parade",
+            "maize_shop": "Maize Shop",
+            "xinu_perfumery": "Xinú Perfumery"
+        },
+        "days": {
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday"
+        },
+        "wedding_name_code": "Loreto & Santiago Wedding"
     }
 }
