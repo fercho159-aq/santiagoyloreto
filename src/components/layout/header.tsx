@@ -9,7 +9,7 @@ import { WeddingRingIcon } from "../icons";
 import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { name: "Agenda", href: "/#agenda" },
+  { name: "Agenda", href: "/agenda" },
   { name: "Campus", href: "/#campus" },
   { name: "Hospedaje", href: "/alojamiento" },
   { name: "Viaje", href: "/viaje" },
@@ -34,7 +34,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const getLinkPath = (href: string) => {
+  const getLinkHref = (href: string) => {
     if (pathname !== '/' && href.startsWith('/#')) {
       return `/${href}`;
     }
@@ -60,7 +60,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={link.href}
+              href={getLinkHref(link.href)}
               className="font-semibold text-primary/80 transition-colors hover:text-primary"
             >
               {link.name}
@@ -88,7 +88,7 @@ export default function Header() {
                   {navLinks.map((link) => (
                     <Link
                       key={link.name}
-                      href={link.href}
+                      href={getLinkHref(link.href)}
                       className="text-xl font-semibold text-primary/80 transition-colors hover:text-primary"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >

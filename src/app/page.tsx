@@ -1,7 +1,6 @@
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
 import HeroSection from '@/components/sections/hero'
-import ItinerarySection from '@/components/sections/itinerary'
 import MapSection from '@/components/sections/map'
 import AccommodationSection from '@/components/sections/accommodation'
 import FaqSection from '@/components/sections/faq'
@@ -13,7 +12,6 @@ export default function Home() {
       <main className="flex-1">
         <Header />
         <HeroSection />
-        <ItinerarySection />
         <MapSection />
         <AccommodationSection />
         <FaqSection />
