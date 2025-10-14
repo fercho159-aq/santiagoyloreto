@@ -7,8 +7,6 @@ import FaqSection from '@/components/sections/faq'
 import RsvpSection from '@/components/sections/rsvp'
 import { getDictionary } from '@/lib/dictionaries'
 import { Locale } from '@/lib/i18n-config'
-import { locations as locationsEs } from "@/lib/data"
-
 
 const getFaqs = (dict: any) => [
     {
