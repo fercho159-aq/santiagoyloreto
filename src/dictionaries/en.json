@@ -1,3 +1,4 @@
+
 {
     "nav": {
         "agenda": "Agenda",
@@ -78,7 +79,12 @@
             "time": "Time",
             "location": "Location",
             "dressCode": "Dress Code"
-        }
+        },
+        "boat_schedule": [
+            { "leg": "TRIP (El Ganzo -> Yetti)", "time": "12:00 PM - 1:00 PM", "details": "Departures every 15 min" },
+            { "leg": "PAUSE (During Mass)", "time": "1:00 PM - 2:30 PM", "details": "Service suspended" },
+            { "leg": "RETURN (Yetti -> El Ganzo)", "time": "2:30 PM - 7:30 PM", "details": "Departures every 15 min" }
+        ]
     },
     "cdmxPage": {
         "title": "CDMX",
@@ -144,11 +150,6 @@
             "formal": "Formal",
             "casual": "Casual"
         },
-        "boat_schedule": [
-            { "leg": "TRIP (El Ganzo -> Yetti)", "time": "12:00 PM - 1:00 PM", "details": "Departures every 15 min" },
-            { "leg": "PAUSE (During Mass)", "time": "1:00 PM - 2:30 PM", "details": "Service suspended" },
-            { "leg": "RETURN (Yetti -> El Ganzo)", "time": "2:30 PM - 7:30 PM", "details": "Departures every 15 min" }
-        ],
         "location_names": {
             "el_ganzo": "Hotel El Ganzo",
             "yetti": "Yetti",
@@ -163,24 +164,21 @@
             "crania": "Hotel Zone, San José del Cabo",
             "la_marina_inn": "A few steps from El Ganzo, La Playita"
         },
-        "faqs": [
-            {
-                "question": "What do 'Beach Casual' and 'Formal' mean?",
-                "answer_html": "<p class=\"font-bold\">Beach Casual:</p><p>Think linen clothes, summer dresses, guayaberas, elegant sandals. Comfortable but stylish. No plastic flip-flops, please!</p><br /><p class=\"font-bold\">Beach Formal:</p><p>For men, a linen or light-colored suit, long-sleeved guayabera. For women, a long or cocktail dress in flowing fabrics and vibrant colors. Stiletto heels are not recommended on the sand.</p><br /><p class=\"font-bold\">Formal:</p><p>Dark suit for men, evening or elegant cocktail dress for women. It's time to shine!</p>"
-            },
-            {
-                "question": "How do I get from the airport to the hotels?",
-                "answer_html": "We recommend booking a shuttle or private taxi from Los Cabos International Airport (SJD). The journey to the La Playita / San José del Cabo area is about 20-30 minutes. There are several reliable services like Cabo Airport Shuttle or Transcabo."
-            },
-            {
-                "question": "Besides the events, what else do you recommend doing?",
-                "answer_html": "You are in paradise! We recommend exploring the historic center of San José del Cabo, especially the 'Art Walk' on Thursday night. You can also enjoy the beaches (Playa Palmilla is beautiful), take a surf class, or a boat tour to the Arch of Cabo San Lucas."
-            },
-            {
-                "question": "Do I need to RSVP for each event separately?",
-                "answer_html": "It's not necessary. By completing the RSVP form on this website, we will understand that you will attend all scheduled events for the weekend. If for any reason you cannot attend a particular event, please let us know personally."
-            }
-        ],
+        "faqs": {
+            "q1": "What do 'Beach Casual' and 'Formal' mean?",
+            "a1_casual_title": "Beach Casual:",
+            "a1_casual_body": "Think linen clothes, summer dresses, guayaberas, elegant sandals. Comfortable but stylish. No plastic flip-flops, please!",
+            "a1_beach_formal_title": "Beach Formal:",
+            "a1_beach_formal_body": "For men, a linen or light-colored suit, long-sleeved guayabera. For women, a long or cocktail dress in flowing fabrics and vibrant colors. Stiletto heels are not recommended on the sand.",
+            "a1_formal_title": "Formal:",
+            "a1_formal_body": "Dark suit for men, evening or elegant cocktail dress for women. It's time to shine!",
+            "q2": "How do I get from the airport to the hotels?",
+            "a2": "We recommend booking a shuttle or private taxi from Los Cabos International Airport (SJD). The journey to the La Playita / San José del Cabo area is about 20-30 minutes. There are several reliable services like Cabo Airport Shuttle or Transcabo.",
+            "q3": "Besides the events, what else do you recommend doing?",
+            "a3": "You are in paradise! We recommend exploring the historic center of San José del Cabo, especially the 'Art Walk' on Thursday night. You can also enjoy the beaches (Playa Palmilla is beautiful), take a surf class, or a boat tour to the Arch of Cabo San Lucas.",
+            "q4": "Do I need to RSVP for each event separately?",
+            "a4": "It's not necessary. By completing the RSVP form on this website, we will understand that you will attend all scheduled events for the weekend. If for any reason you cannot attend a particular event, please let us know personally."
+        },
         "days": {
             "thursday": "Thursday",
             "friday": "Friday",
@@ -290,3 +288,5 @@
         }
     }
 }
+
+    

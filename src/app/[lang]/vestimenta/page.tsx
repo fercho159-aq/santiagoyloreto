@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { Card } from "@/components/ui/card";
 import { getDictionary } from "@/lib/dictionaries";
 import { Locale } from "@/lib/i18n-config";
 
@@ -92,7 +91,7 @@ export default async function DressCodePage({ params: { lang } }: { params: { la
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
                   {welcomeImages.map((image, index) =>
                     image ? (
-                      <Card key={index} className="overflow-hidden bg-background shadow-lg">
+                      <div key={index} className="bg-background">
                         <div className="aspect-[2/3] relative">
                           <Image
                             src={image.imageUrl}
@@ -103,7 +102,7 @@ export default async function DressCodePage({ params: { lang } }: { params: { la
                             data-ai-hint={image.imageHint}
                           />
                         </div>
-                      </Card>
+                      </div>
                     ) : null
                   )}
                 </div>
@@ -119,7 +118,7 @@ export default async function DressCodePage({ params: { lang } }: { params: { la
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
                   {weddingImages.map((image, index) =>
                     image ? (
-                      <Card key={index} className="overflow-hidden bg-background shadow-lg">
+                      <div key={index} className="bg-background">
                         <div className="aspect-[2/3] relative">
                           <Image
                             src={image.imageUrl}
@@ -130,7 +129,7 @@ export default async function DressCodePage({ params: { lang } }: { params: { la
                             data-ai-hint={image.imageHint}
                           />
                         </div>
-                      </Card>
+                      </div>
                     ) : null
                   )}
                 </div>

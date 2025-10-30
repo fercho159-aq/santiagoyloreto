@@ -1,3 +1,4 @@
+
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { events as eventsData } from "@/lib/data";
@@ -21,11 +22,7 @@ export default async function AgendaPage({ params: { lang } }: { params: { lang:
     { dayKey: "sunday", titleKey: "farewell_brunch", time: "10:00 AM - 1:00 PM", locationKey: "sculpture_garden", dressCodeKey: "casual", icon: eventsData[5].icon },
   ];
   
-  const boatSchedule = dataDict.boat_schedule.map((item: any) => ({
-    leg: item.leg,
-    time: item.time,
-    details: item.details,
-  }));
+  const boatSchedule = agendaDict.boat_schedule;
 
   const days = ["thursday", "friday", "saturday", "sunday"];
   const eventsByDay = days.map(dayKey => ({
@@ -102,3 +99,5 @@ export default async function AgendaPage({ params: { lang } }: { params: { lang:
     </div>
   );
 }
+
+    
