@@ -276,6 +276,14 @@
             { "id": "restaurant-tamarindos", "name": "Tamarindos", "link": "https://tamarindos.mx/" },
             { "id": "restaurant-la-lupita", "name": "La Lupita", "link": "https://lalupitatym.com/" },
             { "id": "restaurant-toro-guero", "name": "Toro Güero", "link": "#" }
-        ]
+        ],
+        "dress_code_images": {
+            "welcome_1": "Mujer con un elegante atuendo de playa",
+            "welcome_2": "Hombre con un atuendo de playa casual pero elegante",
+            "welcome_3": "Otro atuendo elegante para un cóctel de bienvenida en la playa",
+            "wedding_1": "Elegante vestido formal para una boda en un jardín al aire libre",
+            "wedding_2": "Hombre con un traje elegante adecuado para una recepción formal",
+            "wedding_3": "Un hermoso vestido largo, perfecto para una recepción de boda"
+        }
     }
 }

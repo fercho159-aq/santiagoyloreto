@@ -19,7 +19,7 @@ type HeroSectionProps = {
 const heroImage = {
   id: "hero-background",
   description: "Romantic beach scene at sunset in Los Cabos",
-  imageUrl: "https://picsum.photos/seed/loretosantiago/1920/1080",
+  imageUrl: "/images/frank-mckenna-OD9EOzfSOh0-unsplash.jpg",
   imageHint: "beach sunset"
 };
 

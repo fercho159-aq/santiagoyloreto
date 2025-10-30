@@ -12,40 +12,40 @@ type ImagePlaceholder = {
   imageHint: string;
 };
 
-const images: ImagePlaceholder[] = [
+const getImages = (dict: any): ImagePlaceholder[] => [
     {
       "id": "dress-code-welcome-1",
-      "description": "Woman in a stylish beach outfit",
+      "description": dict.data.dress_code_images.welcome_1,
       "imageUrl": "/images/dress-code-welcome/5 (1).jpg",
       "imageHint": "beach fashion"
     },
     {
       "id": "dress-code-welcome-2",
-      "description": "Man in a casual but elegant beach attire",
+      "description": dict.data.dress_code_images.welcome_2,
       "imageUrl": "/images/dress-code-welcome/4 (2).png",
       "imageHint": "mens beachwear"
     },
     {
       "id": "dress-code-welcome-3",
-      "description": "Another stylish outfit for a welcome cocktail on the beach",
+      "description": dict.data.dress_code_images.welcome_3,
       "imageUrl": "/images/dress-code-welcome/6 (1).jpg",
       "imageHint": "cocktail dress"
     },
     {
       "id": "dress-code-wedding-1",
-      "description": "Elegant formal dress for an outdoor garden wedding",
+      "description": dict.data.dress_code_images.wedding_1,
       "imageUrl": "/images/dress-code-wedding/1 (1).jpg",
       "imageHint": "garden wedding"
     },
     {
       "id": "dress-code-wedding-2",
-      "description": "Man in a sharp suit suitable for a formal reception",
+      "description": dict.data.dress_code_images.wedding_2,
       "imageUrl": "/images/dress-code-wedding/(1).png",
       "imageHint": "formal suit"
     },
     {
       "id": "dress-code-wedding-3",
-      "description": "A beautiful long dress, perfect for a wedding reception",
+      "description": dict.data.dress_code_images.wedding_3,
       "imageUrl": "/images/dress-code-wedding/2.jpg",
       "imageHint": "elegant gown"
     }
@@ -54,6 +54,7 @@ const images: ImagePlaceholder[] = [
 export default async function DressCodePage({ params: { lang } }: { params: { lang: Locale } }) {
   const dict = await getDictionary(lang);
   const pageDict = dict.dressCodePage;
+  const images = getImages(dict);
 
   const welcomeImages = [
     images.find((img) => img.id === "dress-code-welcome-1"),
