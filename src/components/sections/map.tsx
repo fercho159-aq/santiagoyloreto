@@ -5,13 +5,6 @@ type MapSectionProps = {
         title: string;
         subtitle: string;
     },
-    locations: {
-        id: string;
-        name: string;
-        address: string;
-        events: string[];
-        position: { top: string; left: string; };
-    }[];
 }
 
 const mapImage = {
@@ -21,7 +14,7 @@ const mapImage = {
   imageHint: "cartography map sketch"
 };
 
-export default function MapSection({ dictionary, locations }: MapSectionProps) {
+export default function MapSection({ dictionary }: MapSectionProps) {
   return (
     <section id="campus" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -32,7 +25,7 @@ export default function MapSection({ dictionary, locations }: MapSectionProps) {
           </p>
         </div>
         
-        <div className="relative max-w-7xl mx-auto aspect-video rounded-lg overflow-hidden shadow-2xl border-4 border-secondary">
+        <div className="relative max-w-7xl mx-auto aspect-[4/3] rounded-lg overflow-hidden shadow-2xl border-4 border-secondary">
           <Image
             src="/images/map.jpeg"
             alt={mapImage.description}

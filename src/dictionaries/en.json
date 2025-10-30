@@ -163,21 +163,24 @@
             "crania": "Hotel Zone, San José del Cabo",
             "la_marina_inn": "A few steps from El Ganzo, La Playita"
         },
-        "faqs": {
-            "q1": "What do 'Beach Casual' and 'Formal' mean?",
-            "a1_casual_title": "Beach Casual:",
-            "a1_casual_body": "Think linen clothes, summer dresses, guayaberas, elegant sandals. Comfortable but stylish. No plastic flip-flops, please!",
-            "a1_beach_formal_title": "Beach Formal:",
-            "a1_beach_formal_body": "For men, a linen or light-colored suit, long-sleeved guayabera. For women, a long or cocktail dress in flowing fabrics and vibrant colors. Stiletto heels are not recommended on the sand.",
-            "a1_formal_title": "Formal:",
-            "a1_formal_body": "Dark suit for men, evening or elegant cocktail dress for women. It's time to shine!",
-            "q2": "How do I get from the airport to the hotels?",
-            "a2": "We recommend booking a shuttle or private taxi from Los Cabos International Airport (SJD). The journey to the La Playita / San José del Cabo area is about 20-30 minutes. There are several reliable services like Cabo Airport Shuttle or Transcabo.",
-            "q3": "Besides the events, what else do you recommend doing?",
-            "a3": "You are in paradise! We recommend exploring the historic center of San José del Cabo, especially the 'Art Walk' on Thursday night. You can also enjoy the beaches (Playa Palmilla is beautiful), take a surf class, or a boat tour to the Arch of Cabo San Lucas.",
-            "q4": "Do I need to RSVP for each event separately?",
-            "a4": "It's not necessary. By completing the RSVP form on this website, we will understand that you will attend all scheduled events for the weekend. If for any reason you cannot attend a particular event, please let us know personally."
-        },
+        "faqs": [
+            {
+                "question": "What do 'Beach Casual' and 'Formal' mean?",
+                "answer_html": "<p class=\"font-bold\">Beach Casual:</p><p>Think linen clothes, summer dresses, guayaberas, elegant sandals. Comfortable but stylish. No plastic flip-flops, please!</p><br /><p class=\"font-bold\">Beach Formal:</p><p>For men, a linen or light-colored suit, long-sleeved guayabera. For women, a long or cocktail dress in flowing fabrics and vibrant colors. Stiletto heels are not recommended on the sand.</p><br /><p class=\"font-bold\">Formal:</p><p>Dark suit for men, evening or elegant cocktail dress for women. It's time to shine!</p>"
+            },
+            {
+                "question": "How do I get from the airport to the hotels?",
+                "answer_html": "We recommend booking a shuttle or private taxi from Los Cabos International Airport (SJD). The journey to the La Playita / San José del Cabo area is about 20-30 minutes. There are several reliable services like Cabo Airport Shuttle or Transcabo."
+            },
+            {
+                "question": "Besides the events, what else do you recommend doing?",
+                "answer_html": "You are in paradise! We recommend exploring the historic center of San José del Cabo, especially the 'Art Walk' on Thursday night. You can also enjoy the beaches (Playa Palmilla is beautiful), take a surf class, or a boat tour to the Arch of Cabo San Lucas."
+            },
+            {
+                "question": "Do I need to RSVP for each event separately?",
+                "answer_html": "It's not necessary. By completing the RSVP form on this website, we will understand that you will attend all scheduled events for the weekend. If for any reason you cannot attend a particular event, please let us know personally."
+            }
+        ],
         "days": {
             "thursday": "Thursday",
             "friday": "Friday",
@@ -261,21 +264,21 @@
             ]
         },
         "other_activities_list": [
-            { "id": "activity-horseback", "name": "Horseback Riding", "link": "#" },
-            { "id": "activity-diving", "name": "Diving", "link": "#" },
-            { "id": "activity-ocean-safari", "name": "Ocean Safari", "link": "#" },
-            { "id": "activity-golf", "name": "Golf", "link": "https://www.questrogolf.com/", "code": "Boda Loreto & Santiago", "phone": "624-173-9400", "email": "reservations@questrogolf.com" },
-            { "id": "activity-whale-shark", "name": "Whale Shark", "link": "#" },
-            { "id": "activity-sol-de-mayo", "name": "Sol de Mayo", "link": "#" },
-            { "id": "activity-surf", "name": "Surf Lessons", "link": "#" },
-            { "id": "activity-art-walk", "name": "Art Walk", "link": "#" }
+            { "id": "activity-horseback", "name": "Horseback Riding", "link": "#", "description": "People riding horses on a beach" },
+            { "id": "activity-diving", "name": "Diving", "link": "#", "description": "Scuba diver underwater with coral reef" },
+            { "id": "activity-ocean-safari", "name": "Ocean Safari", "link": "#", "description": "A boat on the ocean during a safari tour" },
+            { "id": "activity-golf", "name": "Golf", "link": "https://www.questrogolf.com/", "code": "Boda Loreto & Santiago", "phone": "624-173-9400", "email": "reservations@questrogolf.com", "description": "A beautiful golf course by the ocean" },
+            { "id": "activity-whale-shark", "name": "Whale Shark", "link": "#", "description": "A person swimming near a large whale shark" },
+            { "id": "activity-sol-de-mayo", "name": "Sol de Mayo", "link": "#", "description": "A waterfall in a canyon" },
+            { "id": "activity-surf", "name": "Surf Lessons", "link": "#", "description": "A person learning to surf" },
+            { "id": "activity-art-walk", "name": "Art Walk", "link": "#", "description": "A colorful street during an art walk event" }
         ],
         "restaurants_list": [
-            { "id": "restaurant-acre", "name": "ACRE", "link": "https://www.acreresort.com/" },
-            { "id": "restaurant-flora-farms", "name": "Flora Farms", "link": "https://www.flora-farms.com/" },
-            { "id": "restaurant-tamarindos", "name": "Tamarindos", "link": "https://tamarindos.mx/" },
-            { "id": "restaurant-la-lupita", "name": "La Lupita", "link": "https://lalupitatym.com/" },
-            { "id": "restaurant-toro-guero", "name": "Toro Güero", "link": "#" }
+            { "id": "restaurant-acre", "name": "ACRE", "link": "https://www.acreresort.com/", "description": "A stylish restaurant in a lush, natural setting" },
+            { "id": "restaurant-flora-farms", "name": "Flora Farms", "link": "https://www.flora-farms.com/", "description": "A rustic farm-to-table restaurant" },
+            { "id": "restaurant-tamarindos", "name": "Tamarindos", "link": "https://tamarindos.mx/", "description": "An elegant restaurant with outdoor seating" },
+            { "id": "restaurant-la-lupita", "name": "La Lupita", "link": "https://lalupitatym.com/", "description": "A lively taqueria with a vibrant atmosphere" },
+            { "id": "restaurant-toro-guero", "name": "Toro Güero", "link": "#", "description": "A local seafood restaurant" }
         ],
         "dress_code_images": {
             "welcome_1": "Woman in a stylish beach outfit",
